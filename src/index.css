@@ -5,3 +5,40 @@
 body {
   @apply bg-gray-900 text-white font-sans;
 }
+
+/* Animated Gradient Border Button */
+@keyframes borderAnimation {
+
+  0%,
+  100% {
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  }
+
+  25% {
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  50% {
+    border-color: #0080ff;
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.5);
+  }
+
+  75% {
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  }
+}
+
+.btn-animated-border {
+  position: relative;
+  border: 2px solid #00ff00;
+  animation: borderAnimation 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.btn-animated-border:hover {
+  transform: scale(1.05);
+  animation-duration: 1.5s;
+}

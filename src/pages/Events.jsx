@@ -70,7 +70,7 @@ const Events = () => {
                                         </div>
                                     </div>
                                     <div className="mt-8 md:mt-0 flex flex-col sm:flex-row gap-4">
-                                        <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                                        <button className="btn-animated-border bg-transparent text-white px-8 py-3 rounded-lg font-bold transition-all duration-300">
                                             Register Now
                                         </button>
                                     </div>

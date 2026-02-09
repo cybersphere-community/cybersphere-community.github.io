@@ -24,7 +24,7 @@ const Home = () => {
                             A non-profit initiative to promote cybersecurity awareness and build a network for students, researchers, and industry professionals.
                         </p>
                         <div className="flex justify-center space-x-4">
-                            <a href="https://lnkd.in/gJQN6f5J" target="_blank" rel="noopener noreferrer" className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-md font-medium transition-colors">
+                            <a href="https://lnkd.in/gJQN6f5J" target="_blank" rel="noopener noreferrer" className="btn-animated-border bg-transparent text-white px-8 py-3 rounded-md font-bold transition-all">
                                 Join Cyber Sphere
                             </a>
                         </div>
