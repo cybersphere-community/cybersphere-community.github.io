@@ -74,11 +74,14 @@ const Articles = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white pt-24 pb-16">
+        <div className="min-h-screen bg-gray-900 text-white pt-24 pb-16 cyber-grid">
+            <div className="scanline"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-extrabold text-white mb-4">Cyber Insights</h1>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+                    <h1 className="text-4xl font-extrabold mb-4">
+                        <span className="gradient-text neon-glow">Cyber Insights</span>
+                    </h1>
+                    <p className="text-cyan-100/70 max-w-2xl mx-auto">
                         Deep dives into cybersecurity, cloud defense, and threat evasion.
                         Aggregation of articles from Dev.to and Medium.
                     </p>
@@ -86,11 +89,11 @@ const Articles = () => {
 
                 {/* Search Bar */}
                 <div className="max-w-md mx-auto mb-12 relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-cyan-500" />
                     <input
                         type="text"
                         placeholder="Search articles..."
-                        className="w-full bg-gray-800 border border-gray-700 rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
+                        className="w-full glow-card border-2 border-cyan-500/30 rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white placeholder-cyan-300/50 transition-all"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -99,13 +102,13 @@ const Articles = () => {
                 {loading ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[1, 2, 3, 4, 5, 6].map((i) => (
-                            <div key={i} className="bg-gray-800 rounded-xl h-96 animate-pulse"></div>
+                            <div key={i} className="glow-card rounded-xl h-96 animate-pulse"></div>
                         ))}
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredBlogs.map((post) => (
-                            <article key={post.id} className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 border border-gray-700 hover:border-cyan-500/30">
+                            <article key={post.id} className="glow-card rounded-xl overflow-hidden transition-all duration-300 group">
                                 <a href={post.url} target="_blank" rel="noopener noreferrer">
                                     <div className="relative h-48">
                                         <img src={post.image} alt={post.title} className="w-full h-full object-cover" />

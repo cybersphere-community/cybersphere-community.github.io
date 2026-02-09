@@ -83,12 +83,12 @@ const BlogSection = () => {
 
     if (loading) {
         return (
-            <section className="py-16 bg-gray-900">
+            <section className="py-16 bg-transparent">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold mb-8 text-center text-white">Latest from Our Blog</h2>
+                    <h2 className="text-3xl font-bold mb-8 text-center"><span className="gradient-text neon-glow">Latest Articles</span></h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[1, 2, 3].map((i) => (
-                            <div key={i} className="bg-gray-800 rounded-xl overflow-hidden animate-pulse h-96"></div>
+                            <div key={i} className="glow-card rounded-xl overflow-hidden animate-pulse h-96"></div>
                         ))}
                     </div>
                 </div>
@@ -99,18 +99,18 @@ const BlogSection = () => {
     if (error) return null; // Or show error message
 
     return (
-        <section className="py-16 bg-gray-900">
+        <section className="py-16 bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-end mb-8">
-                    <h2 className="text-3xl font-bold text-white">Latest Articles</h2>
-                    <Link to="/articles" className="text-cyan-400 hover:text-cyan-300 flex items-center text-sm font-medium">
+                    <h2 className="text-3xl font-bold"><span className="gradient-text neon-glow">Latest Articles</span></h2>
+                    <Link to="/articles" className="text-cyan-400 hover:text-cyan-300 flex items-center text-sm font-medium transition-all hover:scale-105">
                         View all <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogs.map((post) => (
-                        <article key={post.id} className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 border border-gray-700 hover:border-cyan-500/30 shadow-lg">
+                        <article key={post.id} className="glow-card rounded-xl overflow-hidden transition-all duration-300 shadow-lg group">
                             <a href={post.url} target="_blank" rel="noopener noreferrer" className="block h-full flex flex-col">
                                 <div className="relative h-48 overflow-hidden">
                                     <img
