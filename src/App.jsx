@@ -3,8 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Events from './pages/Events';
-import Achievements from './pages/Achievements';
-import News from './pages/News';
+import Articles from './pages/Articles';
 import Speakers from './pages/Speakers';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
@@ -18,8 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/achievements" element={<Achievements />} />
-            <Route path="/news" element={<News />} />
+            <Route path="/articles" element={<Articles />} />
             <Route path="/speakers" element={<Speakers />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />

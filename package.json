@@ -1,6 +1,7 @@
 {
   "name": "cyber-sphere-website",
   "private": true,
+  "homepage": "https://cybersphere-community.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

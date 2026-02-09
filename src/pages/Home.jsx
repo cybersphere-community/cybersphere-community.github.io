@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+import BlogSection from '../components/BlogSection';
+
 const Home = () => {
     return (
         <div className="min-h-screen bg-gray-900 text-white">
@@ -6,18 +9,23 @@ const Home = () => {
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center">
-                        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
-                            Cyber Sphere Community
+                        <div className="flex justify-center mb-8">
+                            <img
+                                src="/logo.png"
+                                alt="Cyber Sphere Logo"
+                                className="h-32 w-auto sm:h-40 rounded-2xl shadow-[0_0_50px_rgba(34,211,238,0.2)] border border-gray-800"
+                            />
+                        </div>
+                        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
+                            <span className="text-red-600">Cyber</span> <span className="text-white">Sphere</span>
+                            <span className="block text-white mt-2">Community</span>
                         </h1>
                         <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                             A non-profit initiative to promote cybersecurity awareness and build a network for students, researchers, and industry professionals.
                         </p>
                         <div className="flex justify-center space-x-4">
-                            <a href="/join" className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-md font-medium transition-colors">
-                                Join Community
-                            </a>
-                            <a href="/about" className="border border-cyan-500 text-cyan-400 hover:bg-cyan-900/20 px-8 py-3 rounded-md font-medium transition-colors">
-                                Learn More
+                            <a href="https://lnkd.in/gJQN6f5J" target="_blank" rel="noopener noreferrer" className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-md font-medium transition-colors">
+                                Join Cyber Sphere
                             </a>
                         </div>
                     </div>
@@ -71,6 +79,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Blog Section */}
+            <BlogSection />
         </div>
     );
 };
