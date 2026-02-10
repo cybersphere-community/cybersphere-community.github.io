@@ -1,5 +1,5 @@
 import SEO from '../components/SEO';
-import { Linkedin, Github, Globe, Shield, Award, MapPin } from 'lucide-react';
+import { Linkedin, Github, Globe, Mail } from 'lucide-react';
 
 const teamMembers = [
     {
@@ -10,7 +10,9 @@ const teamMembers = [
         portfolio: "https://harsh-hak.github.io/",
         linkedin: "https://www.linkedin.com/in/harsh-kanojia369/",
         github: "https://github.com/harsh-hak",
-        objectPosition: "object-[center_35%]"
+        objectPosition: "object-[center_35%]",
+        email: "hk.cybersphere@gmail.com",
+        interests: ["Offensive Security", "Malware Analysis", "LLM Hacking"]
     },
     {
         name: "Manish Garg",
@@ -18,7 +20,9 @@ const teamMembers = [
         university: "Deakin University",
         image: "/team/manish.jpg",
         linkedin: "https://www.linkedin.com/in/manish-garg-51b072228/",
-        objectPosition: "object-top"
+        objectPosition: "object-top",
+        email: "manish.garg@deakin.edu.au",
+        interests: ["Data Analytics", "Business Intelligence", "Risk Assessment"]
     },
     {
         name: "Himanshi Shrivastava",
@@ -26,7 +30,8 @@ const teamMembers = [
         university: "Deakin University",
         image: "/team/himanshi.jpg",
         linkedin: "https://www.linkedin.com/in/himanshi-shrivastava-8000a5180/",
-        objectPosition: "object-center"
+        objectPosition: "object-center",
+        interests: ["SOC Operations", "Threat Intelligence", "Incident Response"]
     },
     {
         name: "Brijesh Palta",
@@ -34,7 +39,8 @@ const teamMembers = [
         university: "Deakin University",
         image: "/team/brijesh.jpg",
         linkedin: "https://www.linkedin.com/in/brijesh-palta/",
-        objectPosition: "object-top"
+        objectPosition: "object-top",
+        interests: ["Cloud Security", "Secure Infra Development", "DevSecOps"]
     },
     {
         name: "Naman Shah",
@@ -42,7 +48,8 @@ const teamMembers = [
         university: "Deakin University",
         image: "/team/naman.jpg",
         linkedin: "https://www.linkedin.com/in/naman-shah-8b67a51a4/",
-        objectPosition: "object-center"
+        objectPosition: "object-center",
+        interests: ["Digital Forensics", "Network Forensics", "Cyber Investigation"]
     }
 ];
 
@@ -64,77 +71,65 @@ const Team = () => {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {teamMembers.map((member, index) => (
                     <div
                         key={index}
-                        className="group relative w-full max-w-sm bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)]"
+                        className="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300 hover:bg-slate-800/60 flex flex-col sm:flex-row items-center sm:items-start gap-6 group"
                     >
-                        {/* Image Container */}
-                        <div className="aspect-[4/3] overflow-hidden relative">
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60 z-10"></div>
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                loading="lazy"
-                                decoding="async"
-                                width="384"
-                                height="288"
-                                className={`w-full h-full object-cover ${member.objectPosition || 'object-center'} group-hover:scale-110 transition-transform duration-500`}
-                            />
+                        {/* Circular Image */}
+                        <div className="flex-shrink-0 relative">
+                            <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-slate-600 group-hover:border-cyan-500 transition-colors duration-300 ring-4 ring-slate-800/50 shadow-lg">
+                                <img
+                                    src={member.image}
+                                    alt={member.name}
+                                    loading="lazy"
+                                    width="112"
+                                    height="112"
+                                    className={`w-full h-full object-cover ${member.objectPosition || 'object-center'} transform group-hover:scale-110 transition-transform duration-500`}
+                                />
+                            </div>
                         </div>
 
                         {/* Content */}
-                        <div className="p-6 relative z-20 -mt-12">
-                            <div className="bg-slate-900/90 backdrop-blur border border-slate-700 p-4 rounded-lg shadow-xl text-center">
-                                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">
-                                    {member.name}
-                                </h3>
-                                <div className="flex items-center justify-center gap-2 text-sm text-cyan-500 mb-1">
-                                    <Award className="w-4 h-4" />
-                                    <span>{member.role}</span>
-                                </div>
-                                <div className="flex items-center justify-center gap-2 text-xs text-slate-400 mb-4">
-                                    <MapPin className="w-3 h-3" />
-                                    <span>{member.university}</span>
-                                </div>
+                        <div className="flex-1 text-center sm:text-left w-full">
+                            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">
+                                {member.name}
+                            </h3>
+                            <p className="text-slate-400 text-sm font-medium mb-1">{member.role}</p>
+                            <p className="text-slate-500 text-sm mb-3">{member.university}</p>
 
-                                {/* Social Links */}
-                                <div className="flex justify-center gap-4 pt-4 border-t border-slate-700">
-                                    {member.portfolio && (
-                                        <a
-                                            href={member.portfolio}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-slate-400 hover:text-cyan-400 transition-colors transform hover:scale-110"
-                                            title="Portfolio"
-                                        >
-                                            <Globe className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                    {member.linkedin && (
-                                        <a
-                                            href={member.linkedin}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-slate-400 hover:text-blue-500 transition-colors transform hover:scale-110"
-                                            title="LinkedIn"
-                                        >
-                                            <Linkedin className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                    {member.github && (
-                                        <a
-                                            href={member.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-slate-400 hover:text-white transition-colors transform hover:scale-110"
-                                            title="GitHub"
-                                        >
-                                            <Github className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                </div>
+                            {/* Interests / Tags */}
+                            <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-4">
+                                {member.interests.map((interest, idx) => (
+                                    <span key={idx} className="bg-slate-900/50 text-cyan-400/80 text-xs px-2 py-1 rounded border border-slate-700/50">
+                                        {interest}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* Social Links - Compact Row */}
+                            <div className="flex justify-center sm:justify-start gap-4 pt-2 border-t border-slate-700/30 mt-auto">
+                                {member.portfolio && (
+                                    <a href={member.portfolio} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors" title="Portfolio">
+                                        <Globe className="w-4 h-4" />
+                                    </a>
+                                )}
+                                {member.linkedin && (
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-500 transition-colors" title="LinkedIn">
+                                        <Linkedin className="w-4 h-4" />
+                                    </a>
+                                )}
+                                {member.github && (
+                                    <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" title="GitHub">
+                                        <Github className="w-4 h-4" />
+                                    </a>
+                                )}
+                                {member.email && (
+                                    <a href={`mailto:${member.email}`} className="text-slate-400 hover:text-red-500 transition-colors" title="Email">
+                                        <Mail className="w-4 h-4" />
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>

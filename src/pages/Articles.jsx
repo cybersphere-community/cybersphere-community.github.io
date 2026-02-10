@@ -119,6 +119,7 @@ const Articles = () => {
                                         <img
                                             src={post.image}
                                             alt={post.title}
+                                            loading="lazy"
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
                                         <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-sm text-sky-400 text-xs px-3 py-1.5 rounded-lg border border-sky-500/20 font-medium">
