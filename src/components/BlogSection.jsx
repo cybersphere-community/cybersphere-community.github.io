@@ -12,8 +12,8 @@ const BlogSection = () => {
             try {
                 const timestamp = new Date().getTime();
                 const [devToRes, mediumRes] = await Promise.allSettled([
-                    fetch(`https://dev.to/api/articles?username=harsh_hak&t=${timestamp}`),
-                    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(`https://medium.com/feed/@cybersphere.official?t=${timestamp}`)}`) // Force refresh RSS
+                    fetch('https://dev.to/api/articles?username=harsh_hak'),
+                    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(`https://medium.com/feed/@cybersphere.official?t=${timestamp}`)}`)
                 ]);
 
                 let allPosts = [];

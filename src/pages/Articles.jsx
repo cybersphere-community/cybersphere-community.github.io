@@ -12,29 +12,35 @@ const Articles = () => {
             try {
                 const timestamp = new Date().getTime();
                 const [devToRes, mediumRes] = await Promise.allSettled([
-                    fetch(`https://dev.to/api/articles?username=harsh_hak&t=${timestamp}`),
+                    fetch('https://dev.to/api/articles?username=harsh_hak'),
                     fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(`https://medium.com/feed/@cybersphere.official?t=${timestamp}`)}`)
                 ]);
 
                 let allPosts = [];
 
                 if (devToRes.status === 'fulfilled') {
+                    if (!devToRes.value.ok) console.error("Dev.to API Error:", devToRes.value.status, devToRes.value.statusText);
                     const devToData = await devToRes.value.json();
-                    const formattedDevTo = devToData.map(post => ({
-                        id: `devto-${post.id}`,
-                        title: post.title,
-                        description: post.description,
-                        url: post.url,
-                        image: post.cover_image || post.social_image || 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1000',
-                        date: new Date(post.published_at),
-                        author: post.user.name,
-                        authorImage: post.user.profile_image,
-                        source: 'Dev.to'
-                    }));
-                    allPosts = [...allPosts, ...formattedDevTo];
+                    if (Array.isArray(devToData)) {
+                        const formattedDevTo = devToData.map(post => ({
+                            id: `devto-${post.id}`,
+                            title: post.title,
+                            description: post.description,
+                            url: post.url,
+                            image: post.cover_image || post.social_image || 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1000',
+                            date: new Date(post.published_at),
+                            author: post.user.name,
+                            authorImage: post.user.profile_image,
+                            source: 'Dev.to'
+                        }));
+                        allPosts = [...allPosts, ...formattedDevTo];
+                    }
+                } else {
+                    console.error("Dev.to Request Failed:", devToRes.reason);
                 }
 
                 if (mediumRes.status === 'fulfilled') {
+                    if (!mediumRes.value.ok) console.error("Medium RSS Error:", mediumRes.value.status, mediumRes.value.statusText);
                     const mediumData = await mediumRes.value.json();
                     if (mediumData.status === 'ok' && mediumData.items) {
                         const formattedMedium = mediumData.items.map((post, index) => {
@@ -56,7 +62,11 @@ const Articles = () => {
                             };
                         });
                         allPosts = [...allPosts, ...formattedMedium];
+                    } else {
+                        console.warn("Medium RSS returned invalid status:", mediumData);
                     }
+                } else {
+                    console.error("Medium RSS Request Failed:", mediumRes.reason);
                 }
 
                 allPosts.sort((a, b) => b.date - a.date);
