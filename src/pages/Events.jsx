@@ -1,35 +1,9 @@
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import SEO from '../components/SEO';
 
-const Events = () => {
-    const upcomingEvents = [
-        {
-            id: 1,
-            title: "Advanced Penetration Testing Techniques",
-            date: "Oct 25, 2026",
-            time: "18:00 IST",
-            location: "Online / Microsoft Teams",
-            type: "Webinar",
-            description: "Join us for a deep dive into modern pentesting methodologies with industry experts."
-        }
-    ];
+import { upcomingEvents, pastEvents } from '../data/events';
 
-    const pastEvents = [
-        {
-            id: 101,
-            title: "Intro to Bug Bounty Hunting",
-            date: "Aug 12, 2025",
-            type: "Workshop",
-            description: "A comprehensive guide for beginners to start their journey in bug bounty hunting."
-        },
-        {
-            id: 102,
-            title: "Cloud Security Fundamentals",
-            date: "June 05, 2025",
-            type: "Tech Talk",
-            description: "Exploring shared responsibility models and securing AWS/Azure environments."
-        }
-    ];
+const Events = () => {
 
     return (
         <div className="min-h-screen text-white pt-20 pb-12 sm:pt-28 sm:pb-20 cyber-grid">

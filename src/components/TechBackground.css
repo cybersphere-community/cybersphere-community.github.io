@@ -8,17 +8,20 @@
     pointer-events: none;
     z-index: 0;
     overflow: hidden;
+    perspective: 1000px;
 }
 
-/* Floating Particles */
+/* Floating Particles - Square pixels for tech feel */
 .tech-particle {
     position: absolute;
     bottom: -10px;
-    background: rgba(14, 165, 233, 0.6);
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.8);
+    background: var(--neon-cyan);
+    width: 4px;
+    height: 4px;
+    box-shadow: 0 0 8px var(--neon-cyan);
     animation: float linear infinite;
     pointer-events: none;
+    opacity: 0.6;
 }
 
 /* Scanning Lines */
@@ -26,91 +29,134 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: linear-gradient(90deg,
             transparent 0%,
-            rgba(14, 165, 233, 0.3) 50%,
+            var(--neon-cyan) 50%,
             transparent 100%);
-    animation: scan 8s linear infinite;
-    opacity: 0.5;
+    box-shadow: 0 0 10px var(--neon-cyan);
+    animation: scan 6s linear infinite;
+    opacity: 0.3;
 }
 
 .scan-line-2 {
-    animation-delay: 4s;
-    animation-duration: 12s;
+    animation-delay: 3s;
+    animation-duration: 8s;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--neon-purple) 50%,
+            transparent 100%);
 }
 
 @keyframes scan {
     0% {
-        top: 0;
+        top: -10%;
         opacity: 0;
     }
 
     10% {
-        opacity: 0.5;
+        opacity: 0.8;
     }
 
     90% {
-        opacity: 0.5;
+        opacity: 0.8;
     }
 
     100% {
-        top: 100%;
+        top: 110%;
         opacity: 0;
     }
 }
 
-/* Corner Accents */
+/* Corner Accents - HUD Style */
 .corner-accent {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    border: 2px solid rgba(14, 165, 233, 0.3);
-    opacity: 0.6;
-    animation: cornerPulse 3s ease-in-out infinite;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 243, 255, 0.1);
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.corner-accent::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--neon-cyan);
+    transition: all 0.3s ease;
 }
 
 .corner-tl {
-    top: 20px;
-    left: 20px;
+    top: 40px;
+    left: 40px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-tl::after {
+    top: 0;
+    left: 0;
     border-right: none;
     border-bottom: none;
 }
 
 .corner-tr {
-    top: 20px;
-    right: 20px;
+    top: 40px;
+    right: 40px;
     border-left: none;
     border-bottom: none;
-    animation-delay: 0.75s;
+}
+
+.corner-tr::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
 }
 
 .corner-bl {
-    bottom: 20px;
-    left: 20px;
+    bottom: 40px;
+    left: 40px;
     border-right: none;
     border-top: none;
-    animation-delay: 1.5s;
+}
+
+.corner-bl::after {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
 }
 
 .corner-br {
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
     border-left: none;
     border-top: none;
-    animation-delay: 2.25s;
 }
 
-@keyframes cornerPulse {
+.corner-br::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+/* Pulse Animation for Corners */
+@keyframes hudPulse {
 
     0%,
     100% {
         opacity: 0.3;
-        transform: scale(1);
     }
 
     50% {
         opacity: 0.8;
-        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
     }
+}
+
+.corner-accent::after {
+    animation: hudPulse 4s infinite;
 }
