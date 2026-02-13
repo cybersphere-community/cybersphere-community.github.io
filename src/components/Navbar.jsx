@@ -20,10 +20,10 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-20">
                     <div className="flex items-center">
                         <Link to="/" className="flex items-center group gap-2">
-                            <div className="w-8 h-8 rounded-lg bg-brand-accent flex items-center justify-center text-white font-bold font-orbitron">
-                                CS
+                            <div className="flex items-center gap-1">
+                                <span className="bg-slate-900 text-white px-2 py-1 rounded font-bold tracking-tight text-lg">CYBER</span>
+                                <span className="text-brand-accent font-bold tracking-tight text-lg">SPHERE</span>
                             </div>
-                            <span className="font-bold text-slate-900 tracking-tight text-lg">CYBER <span className="text-brand-accent">SPHERE</span></span>
                         </Link>
                     </div>
                     <div className="hidden md:block">

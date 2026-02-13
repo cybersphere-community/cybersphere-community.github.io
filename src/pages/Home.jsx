@@ -34,9 +34,9 @@ const Home = () => {
                                 <span className="text-brand-accent text-xs font-bold tracking-widest uppercase">Community Active</span>
                             </div>
 
-                            <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-brand-primary leading-tight">
-                                The Future of <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-indigo-600">Cybersecurity</span>
+                            <h1 className="text-5xl sm:text-7xl font-bold tracking-tight leading-tight flex flex-col items-start gap-2">
+                                <span className="bg-slate-900 text-white px-6 py-2 rounded-lg transform -skew-x-6 inline-block shadow-xl">CYBER</span>
+                                <span className="text-brand-accent drop-shadow-sm">SPHERE</span>
                             </h1>
 
                             <p className="text-xl text-slate-600 max-w-lg leading-relaxed">
