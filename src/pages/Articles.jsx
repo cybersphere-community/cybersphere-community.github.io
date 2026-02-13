@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Calendar, User, ArrowRight, ExternalLink, Search } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -6,6 +7,24 @@ const Articles = () => {
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
+
+    // Schema for Articles Collection
+    const collectionSchema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Cyber Insights - Cybersecurity Articles",
+        "description": "Deep dives into cybersecurity, cloud defense, and threat evasion.",
+        "url": "https://cybersphere-community.github.io/articles",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": blogs.map((blog, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "url": blog.url,
+                "name": blog.title
+            }))
+        }
+    };
 
     useEffect(() => {
         const fetchBlogs = async () => {
@@ -87,6 +106,11 @@ const Articles = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 text-slate-900 pt-24 pb-12 sm:pt-32 sm:pb-20 font-sans">
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(collectionSchema)}
+                </script>
+            </Helmet>
             <SEO
                 title="Articles"
                 description="Read the latest articles and tutorials on cybersecurity, cloud defense, and ethical hacking."

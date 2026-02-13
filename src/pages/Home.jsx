@@ -4,6 +4,7 @@ import SecurityQuotes from '../components/SecurityQuotes';
 import { Shield, Users, Calendar, Award, Terminal, Code, Lock, Zap, Cpu, Globe, Activity } from 'lucide-react';
 import SEO from '../components/SEO';
 import { upcomingEvents } from '../data/events';
+import CallForSpeakers from '../components/CallForSpeakers';
 
 const Home = () => {
     const featuredEvent = upcomingEvents[0];
@@ -90,6 +91,7 @@ const Home = () => {
                                     <img
                                         src="/terminal-logo.png.png"
                                         alt="Cyber Sphere"
+                                        loading="lazy"
                                         className="w-16 h-16 sm:w-20 sm:h-20 object-contain relative z-20 drop-shadow-lg"
                                     />
                                 </div>
@@ -200,6 +202,11 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Call For Speakers */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+                <CallForSpeakers />
+            </div>
 
             {/* Blog Section */}
             <div className="bg-white">

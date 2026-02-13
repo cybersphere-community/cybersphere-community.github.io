@@ -35,7 +35,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-bold text-slate-900 mb-5">Connect With Us</h3>
                         <div className="flex gap-4 mb-4">
-                            <a href="#" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white hover:shadow-sm rounded-lg border border-transparent hover:border-slate-100">
+                            <a href="https://github.com/cybersphere-community" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white hover:shadow-sm rounded-lg border border-transparent hover:border-slate-100">
                                 <Github className="h-6 w-6" />
                             </a>
                             <a href="#" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white hover:shadow-sm rounded-lg border border-transparent hover:border-slate-100">

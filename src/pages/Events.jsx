@@ -1,10 +1,31 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Calendar, MapPin, Clock, ArrowLeft, ArrowRight, Linkedin } from 'lucide-react';
 import SEO from '../components/SEO';
 import { upcomingEvents, pastEvents } from '../data/events';
 
 const Events = () => {
     const [selectedEvent, setSelectedEvent] = React.useState(null);
+
+    // Schema.org Structured Data for Events
+    const eventSchema = upcomingEvents.map(event => ({
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": event.title,
+        "startDate": event.date,
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "location": {
+            "@type": "VirtualLocation",
+            "url": "https://cybersphere-community.github.io/events"
+        },
+        "description": event.description,
+        "organizer": {
+            "@type": "Organization",
+            "name": "Cyber Sphere Community",
+            "url": "https://cybersphere-community.github.io"
+        }
+    }));
 
     // Lock body scroll when modal is open
     useEffect(() => {
@@ -20,6 +41,11 @@ const Events = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 text-slate-900 pt-24 pb-12 sm:pt-32 sm:pb-20 font-sans">
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(eventSchema)}
+                </script>
+            </Helmet>
             <SEO
                 title="Events & Webinars"
                 description="Explore upcoming and past cybersecurity events, webinars, and workshops hosted by Cyber Sphere."
