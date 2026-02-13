@@ -23,6 +23,17 @@ export const pastEvents = [
         organizerUrl: "https://www.linkedin.com/in/harsh-kanojia369/"
     },
     {
+        id: 104,
+        title: "Cloud Security Fundamentals: Where Cloud Systems Actually Fail",
+        date: "Feb 09, 2026",
+        type: "Workshop",
+        description: "Practical session on securing data, applications, and infrastructure in cloud environments. Exploring the Shared Responsibility Model and common attack surfaces.",
+        speaker: "Brijesh Palta",
+        speakerUrl: "https://www.linkedin.com/in/brijesh-palta/",
+        organizer: "Harsh Kanojia",
+        organizerUrl: "https://www.linkedin.com/in/harsh-kanojia369/"
+    },
+    {
         id: 101,
         title: "Intro to Bug Bounty Hunting",
         date: "Aug 12, 2025",
