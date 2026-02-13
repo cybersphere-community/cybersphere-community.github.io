@@ -15,39 +15,33 @@ const Home = () => {
                 keywords="cybersecurity, community, hacking, students, events, ctf, workshops"
             />
 
-            {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center pt-20 pb-12 overflow-hidden">
-                {/* Decorative Elements */}
-                <div className="absolute top-1/4 left-0 w-64 h-64 bg-neon-cyan/10 rounded-full blur-[100px] pointer-events-none"></div>
-                <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-neon-purple/10 rounded-full blur-[120px] pointer-events-none"></div>
+            {/* Hero Section - Premium Light */}
+            <section className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-12 overflow-hidden bg-white">
+                {/* Subtle Background Elements */}
+                <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50 rounded-full blur-[120px] opacity-60 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-indigo-50 rounded-full blur-[120px] opacity-60 pointer-events-none"></div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         {/* Left Content - Typography & CTA */}
-                        <div className="text-left space-y-8 fade-in">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neon-cyan/30 bg-neon-cyan/5 backdrop-blur-sm">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-cyan opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-neon-cyan"></span>
+                        <div className="text-left space-y-8 animate-fade-in">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 shadow-sm">
+                                <span className="relative flex h-2.5 w-2.5">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-accent"></span>
                                 </span>
-                                <span className="text-neon-cyan text-xs font-mono tracking-widest uppercase">System Online</span>
+                                <span className="text-brand-accent text-xs font-bold tracking-widest uppercase">Community Active</span>
                             </div>
 
-                            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-orbitron leading-tight text-white relative z-20">
-                                <span className="block glitch-text text-red-600 drop-shadow-[0_0_20px_rgba(220,38,38,0.7)]" data-text="CYBER">
-                                    CYBER
-                                </span>
-                                <span className="block text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">
-                                    SPHERE
-                                </span>
-                                <span className="block text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">
-                                    COMMUNITY
-                                </span>
+                            <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-brand-primary leading-tight">
+                                The Future of <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-indigo-600">Cybersecurity</span>
                             </h1>
 
-                            <p className="text-lg sm:text-xl text-slate-400 max-w-xl leading-relaxed border-l-2 border-red-600 pl-6">
+                            <p className="text-xl text-slate-600 max-w-lg leading-relaxed">
                                 An open collective for hackers, researchers, and defenders.
-                                <span className="text-slate-200 font-medium"> No corporate agenda. Just pure security research, knowledge sharing, and ethical hacking.</span>
+                                <span className="font-semibold text-slate-800"> No corporate agenda.</span> Just pure security research and knowledge sharing.
                             </p>
 
                             <div className="flex flex-wrap gap-4 pt-4">
@@ -55,31 +49,36 @@ const Home = () => {
                                     href="https://forms.gle/xsLyYgHzMiYsp8zx6"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group relative px-8 py-4 bg-red-600/10 border border-red-600/50 text-red-500 font-orbitron font-bold tracking-wider uppercase hover:bg-red-600 hover:text-white transition-all duration-300 clip-path-slant"
+                                    className="btn-primary shadow-xl shadow-blue-500/20 hover:shadow-blue-600/30 text-lg px-8 py-4"
                                 >
-                                    <span className="absolute inset-0 w-full h-full bg-red-600/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                                    Join Community
+                                    Join Community <Users className="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
 
-                        {/* Right Content - 3D/Tech Visual */}
-                        <div className="relative fade-in mt-12 lg:mt-0" style={{ animationDelay: '0.2s' }}>
-                            <div className="relative w-full aspect-square max-w-md mx-auto flex items-center justify-center">
-                                {/* Outer Glow Ring */}
-                                <div className="absolute inset-0 rounded-full border border-neon-cyan/20 shadow-[0_0_60px_rgba(0,243,255,0.1)] animate-pulse"></div>
-
-                                {/* Rotating Orbit Ring */}
-                                <div className="absolute inset-4 rounded-full border border-slate-800 border-t-neon-cyan/50 animate-spin-slow"></div>
+                        {/* Right Content - Modern Visual */}
+                        <div className="relative animate-fade-in flex justify-center lg:justify-end" style={{ animationDelay: '0.2s' }}>
+                            <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+                                {/* Decorative Rings */}
+                                <div className="absolute inset-0 rounded-full border-2 border-slate-100 animate-[spin_10s_linear_infinite]"></div>
+                                <div className="absolute inset-8 rounded-full border border-slate-200 animate-[spin_15s_linear_infinite_reverse]"></div>
 
                                 {/* Central Logo Container */}
-                                <div className="relative w-64 h-64 bg-black/80 backdrop-blur-xl rounded-full border border-slate-700/50 flex items-center justify-center shadow-[0_0_30px_rgba(0,243,255,0.15)] animate-float">
-                                    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-neon-cyan/5 to-transparent"></div>
+                                <div className="absolute inset-0 m-auto w-48 h-48 bg-white rounded-full shadow-[0_20px_50px_rgba(37,99,235,0.15)] flex items-center justify-center border border-slate-50 relative z-10">
+                                    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-50 to-transparent"></div>
                                     <img
                                         src="/terminal-logo.png.png"
                                         alt="Cyber Sphere"
-                                        className="w-40 h-40 object-contain drop-shadow-[0_0_25px_rgba(0,243,255,0.3)]"
+                                        className="w-28 h-28 object-contain relative z-20"
                                     />
+                                </div>
+
+                                {/* Floating Elements */}
+                                <div className="absolute top-0 right-10 bg-white p-3 rounded-2xl shadow-lg border border-slate-100 animate-bounce delay-100">
+                                    <Shield className="w-6 h-6 text-brand-accent" />
+                                </div>
+                                <div className="absolute bottom-10 left-0 bg-white p-3 rounded-2xl shadow-lg border border-slate-100 animate-bounce delay-300">
+                                    <Terminal className="w-6 h-6 text-slate-700" />
                                 </div>
                             </div>
                         </div>
