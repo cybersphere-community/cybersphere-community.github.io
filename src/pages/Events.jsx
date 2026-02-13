@@ -77,9 +77,23 @@ const Events = () => {
                                 <h3 className="text-2xl font-bold mb-3 text-white">
                                     {event.title}
                                 </h3>
-                                <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed">
+                                <p className="text-slate-400 text-sm mb-4 leading-relaxed">
                                     {event.description}
                                 </p>
+                                {(event.speaker || event.organizer) && (
+                                    <div className="pt-4 border-t border-slate-700/50 flex flex-wrap gap-4 text-xs text-slate-500 font-mono">
+                                        {event.speaker && (
+                                            <div>
+                                                SPEAKER: <a href={event.speakerUrl} target="_blank" rel="noopener noreferrer" className="text-neon-cyan hover:text-white transition-colors ml-1">{event.speaker}</a>
+                                            </div>
+                                        )}
+                                        {event.organizer && (
+                                            <div>
+                                                ORGANIZER: <a href={event.organizerUrl} target="_blank" rel="noopener noreferrer" className="text-neon-purple hover:text-white transition-colors ml-1">{event.organizer}</a>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>

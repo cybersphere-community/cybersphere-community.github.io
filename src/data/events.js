@@ -12,6 +12,17 @@ export const upcomingEvents = [
 
 export const pastEvents = [
     {
+        id: 103,
+        title: "IoT Hacking Workshop: Router-Level Security Failures",
+        date: "Jan 29, 2026",
+        type: "Workshop",
+        description: "Hands-on session on router-level vulnerabilities, understanding IoT architecture, and attacker methodology.",
+        speaker: "Naman Shah",
+        speakerUrl: "https://www.linkedin.com/in/naman-shah-8b67a51a4/",
+        organizer: "Harsh Kanojia",
+        organizerUrl: "https://www.linkedin.com/in/harsh-kanojia369/"
+    },
+    {
         id: 101,
         title: "Intro to Bug Bounty Hunting",
         date: "Aug 12, 2025",
