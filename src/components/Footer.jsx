@@ -52,7 +52,7 @@ const Footer = () => {
                 </div>
                 <div className="mt-12 border-t border-slate-700/50 pt-8 text-center">
                     <p className="text-slate-500 text-sm">
-                        &copy; {new Date().getFullYear()} Cyber Sphere. Open Community. All rights reserved.
+                        &copy; {new Date().getFullYear()} Cyber Sphere. Open Community. All rights reserved. <span className="opacity-50 text-xs ml-2">v1.1</span>
                     </p>
                 </div>
             </div>
