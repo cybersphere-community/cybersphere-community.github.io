@@ -1,4 +1,4 @@
-import{j as e}from"./index-TZtMW0EB.js";import{r as d}from"./vendor-react-BtEuvAGH.js";import{j as m,k as p,l as x}from"./vendor-icons-Bj9CnN4q.js";const f=()=>{const[a,o]=d.useState({name:"",email:"",topic:"",abstract:""}),l=t=>{const{name:s,value:r}=t.target;o(c=>({...c,[s]:r}))},n=t=>{t.preventDefault();const s=encodeURIComponent(`Speaker Proposal: ${a.topic}`),r=encodeURIComponent(`Name: ${a.name}
+import{j as e}from"./index-BPnl902h.js";import{r as d}from"./vendor-react-BtEuvAGH.js";import{l as m,k as p,m as x}from"./vendor-icons-Dc6rBwTN.js";const f=()=>{const[a,o]=d.useState({name:"",email:"",topic:"",abstract:""}),l=t=>{const{name:s,value:r}=t.target;o(c=>({...c,[s]:r}))},n=t=>{t.preventDefault();const s=encodeURIComponent(`Speaker Proposal: ${a.topic}`),r=encodeURIComponent(`Name: ${a.name}
 Email: ${a.email}
 
 Topic: ${a.topic}
