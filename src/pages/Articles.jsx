@@ -112,9 +112,9 @@ const Articles = () => {
                 </script>
             </Helmet>
             <SEO
-                title="Articles"
-                description="Read the latest articles and tutorials on cybersecurity, cloud defense, and ethical hacking."
-                keywords="cybersecurity articles, tutorials, hacking, cloud security, ethical hacking"
+                title="Cybersecurity Articles & Tutorials | Security Research Blog"
+                description="Read in-depth cybersecurity articles, ethical hacking tutorials, penetration testing guides, and latest security research. Expert insights on vulnerabilities, exploits, and defense strategies."
+                keywords="cybersecurity articles, ethical hacking tutorials, penetration testing guides, security research, vulnerability analysis, exploit development, infosec blog, malware analysis, web security, network security"
             />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">

@@ -47,9 +47,9 @@ const Events = () => {
                 </script>
             </Helmet>
             <SEO
-                title="Events & Webinars"
-                description="Explore upcoming and past cybersecurity events, webinars, and workshops hosted by Cyber Sphere."
-                keywords="cybersecurity events, webinars, workshops, pentesting, cloud security"
+                title="Cybersecurity Events & Workshops | CTF Competitions"
+                description="Attend hands-on cybersecurity workshops, capture the flag (CTF) competitions, and security training events. Learn ethical hacking, penetration testing, and infosec skills through practical sessions."
+                keywords="cybersecurity events india, ctf competitions, security workshops, ethical hacking events, penetration testing training, infosec meetups, bug bounty workshops, security conferences"
             />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Upcoming Events Section */}

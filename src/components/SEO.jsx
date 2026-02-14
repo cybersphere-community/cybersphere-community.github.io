@@ -6,7 +6,7 @@ const SEO = ({ title, description, canonical, keywords, image }) => {
     const metaImage = image || `${siteUrl}/terminal-logo.png.png`; // Fallback to logo
 
     // Structured Data (JSON-LD) for the Community/Organization
-    const structuredData = {
+    const organizationSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Cyber Sphere Community",
@@ -15,8 +15,30 @@ const SEO = ({ title, description, canonical, keywords, image }) => {
         "description": "An open collective for ethical hackers and security researchers.",
         "sameAs": [
             "https://linkedin.com/company/cybersphere",
-            // Add other social links here if available
-        ]
+            "https://github.com/cybersphere-community"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "cybersphere.official@outlook.com",
+            "contactType": "customer support"
+        }
+    };
+
+    // WebSite schema for search box potential
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Cyber Sphere Community",
+        "url": siteUrl,
+        "description": "Leading cybersecurity community for ethical hackers, researchers, and security enthusiasts",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": `${siteUrl}/#/articles?search={search_term_string}`
+            },
+            "query-input": "required name=search_term_string"
+        }
     };
 
     return (
@@ -39,9 +61,14 @@ const SEO = ({ title, description, canonical, keywords, image }) => {
             <meta name="twitter:description" content={description || "Join the Cyber Sphere Community - A hub for cybersecurity enthusiasts, students, and professionals."} />
             <meta name="twitter:image" content={metaImage} />
 
-            {/* Structured Data */}
+            {/* Structured Data - Organization */}
             <script type="application/ld+json">
-                {JSON.stringify(structuredData)}
+                {JSON.stringify(organizationSchema)}
+            </script>
+
+            {/* Structured Data - WebSite */}
+            <script type="application/ld+json">
+                {JSON.stringify(websiteSchema)}
             </script>
         </Helmet>
     );

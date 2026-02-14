@@ -11,9 +11,9 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-brand-light text-brand-secondary overflow-hidden font-sans">
             <SEO
-                title="Home"
-                description="Welcome to Cyber Sphere Community - The ultimate hub for cybersecurity enthusiasts, students, and professionals to learn, collaborate, and grow."
-                keywords="cybersecurity, community, hacking, students, events, ctf, workshops"
+                title="Cybersecurity Community | Ethical Hacking & Security Research Hub"
+                description="Join Cyber Sphere - India's leading cybersecurity community for ethical hackers, security researchers, and infosec professionals. Free workshops, CTFs, and hands-on security training."
+                keywords="cybersecurity community india, ethical hacking, security research, infosec, penetration testing, bug bounty, ctf competitions, cyber security workshops, security training, hacker community"
             />
 
             {/* Hero Section - Premium Light */}
@@ -85,14 +85,14 @@ const Home = () => {
                                 </div>
 
                                 {/* Central Core */}
-                                <div className="absolute w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full shadow-[0_0_50px_rgba(37,99,235,0.2)] flex items-center justify-center border border-slate-50 z-10 relative group hover:scale-105 transition-transform duration-500">
+                                <div className="absolute w-40 h-40 sm:w-56 sm:h-56 bg-white rounded-full shadow-[0_0_50px_rgba(37,99,235,0.2)] flex items-center justify-center border border-slate-50 z-10 relative group hover:scale-105 transition-transform duration-500">
                                     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-50 to-transparent opacity-50"></div>
                                     <div className="absolute inset-2 rounded-full border border-slate-100"></div>
                                     <img
                                         src="/terminal-logo.png.png"
-                                        alt="Cyber Sphere"
+                                        alt="Cyber Sphere Community Logo - Cybersecurity and Ethical Hacking Hub"
                                         loading="lazy"
-                                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain relative z-20 drop-shadow-lg"
+                                        className="w-20 h-20 sm:w-32 sm:h-32 object-cover rounded-full relative z-20 drop-shadow-lg"
                                     />
                                 </div>
                             </div>

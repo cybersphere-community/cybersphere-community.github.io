@@ -11,6 +11,7 @@ const Articles = lazy(() => import('./pages/Articles'));
 const Speakers = lazy(() => import('./pages/Speakers'));
 const Team = lazy(() => import('./pages/Team'));
 const Contact = lazy(() => import('./pages/Contact'));
+const CallForSpeakersPage = lazy(() => import('./pages/CallForSpeakersPage'));
 
 // Loading component
 const PageLoader = () => (
@@ -37,6 +38,7 @@ function App() {
               <Route path="/speakers" element={<Speakers />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/call-for-speakers" element={<CallForSpeakersPage />} />
             </Routes>
           </Suspense>
         </main>

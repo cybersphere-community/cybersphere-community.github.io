@@ -1,5 +1,5 @@
 import SEO from '../components/SEO';
-import CallForSpeakers from '../components/CallForSpeakers';
+
 
 import { Linkedin } from 'lucide-react';
 
@@ -72,7 +72,8 @@ const Speakers = () => {
                     ))}
                 </div>
 
-                <CallForSpeakers />
+                {/* CallForSpeakers component moved to dedicated page */}
+
             </div>
         </div>
     );
