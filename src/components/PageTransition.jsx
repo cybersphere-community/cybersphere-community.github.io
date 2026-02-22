@@ -16,9 +16,10 @@ const pageVariants = {
 };
 
 const pageTransition = {
-    type: 'tween',
-    ease: 'anticipate',
-    duration: 0.4,
+    type: 'spring',
+    stiffness: 100,
+    damping: 20,
+    mass: 0.5,
 };
 
 const PageTransition = ({ children }) => {

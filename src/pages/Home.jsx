@@ -112,8 +112,8 @@ const Home = () => {
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-10px" }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.4, delay: i * 0.05 }}
                                 className="py-8 text-center group cursor-default"
                             >
                                 <div className="text-3xl font-bold text-brand-primary mb-1 transition-transform dark:text-white">
@@ -148,8 +148,8 @@ const Home = () => {
                                 key={i}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-20px" }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.4, delay: i * 0.05 }}
                                 className={`bg-white dark:bg-white/5 backdrop-blur-md rounded-2xl border border-slate-200 dark:border-white/10 group p-8 ${i === 1 ? 'md:-mt-8' : ''}`}
                             >
                                 <div className="w-14 h-14 bg-blue-50 dark:bg-white/5 backdrop-blur-md rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">

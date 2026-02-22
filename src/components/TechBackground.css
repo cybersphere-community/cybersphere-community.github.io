@@ -11,24 +11,6 @@
     perspective: 1000px;
 }
 
-/* Floating Particles - Tech Icons */
-.tech-particle {
-    position: absolute;
-    bottom: -50px;
-    color: #1e293b;
-    /* Slate 800 (Dark Techy Grey/Black) */
-    will-change: transform;
-    animation: float linear infinite;
-    pointer-events: none;
-    opacity: 0.15;
-    /* Subtly floating in background */
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
-}
-
-.tech-particle svg {
-    display: block;
-}
-
 /* Updated Scanning Lines */
 .scan-line {
     position: absolute;
@@ -39,9 +21,10 @@
             transparent 0%,
             rgba(0, 0, 0, 0.05) 50%,
             transparent 100%);
+    top: 0;
     animation: scan 10s linear infinite;
     opacity: 0.1;
-    will-change: transform;
+    will-change: transform, opacity;
 }
 
 .scan-line-2 {
@@ -54,7 +37,7 @@
 
 @keyframes scan {
     0% {
-        top: -10%;
+        transform: translateY(-10vh);
         opacity: 0;
     }
 
@@ -67,7 +50,7 @@
     }
 
     100% {
-        top: 110%;
+        transform: translateY(110vh);
         opacity: 0;
     }
 }
@@ -154,11 +137,12 @@
     0%,
     100% {
         opacity: 0.3;
+        transform: scale(1);
     }
 
     50% {
         opacity: 0.6;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        transform: scale(1.05);
     }
 }
 
