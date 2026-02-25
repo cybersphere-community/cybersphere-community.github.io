@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, MapPin, Clock, ArrowRight, Linkedin } from 'lucide-react';
 import SEO from '../components/SEO';
