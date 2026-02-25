@@ -1,11 +1,12 @@
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import { AnimatePresence } from 'framer-motion';
 import PageTransition from './components/PageTransition';
 import CyberGlobe from './components/canvas/CyberGlobe';
+import LoadingScreen from './components/LoadingScreen';
 
 // Lazy load pages for performance optimization
 const Home = lazy(() => import('./pages/Home'));
@@ -46,8 +47,24 @@ const AnimatedRoutes = () => {
 };
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    // Simulate initial loading time or wait for window.onload
+    const timer = setTimeout(() => {
+      setFadeOut(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 500); // Match CSS transition duration
+    }, 2000); // Keep loading screen for at least 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ThemeProvider>
+      {loading && <LoadingScreen isFadeOut={fadeOut} />}
       <Router>
         <div className="flex flex-col min-h-screen text-slate-800 dark:text-slate-200 transition-colors duration-300">
           <CyberGlobe />
