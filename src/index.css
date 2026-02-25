@@ -133,3 +133,66 @@ body {
 .animate-spin-slow {
   animation: spin-slow 3s linear infinite;
 }
+
+/* Team Social Icons UI */
+.team-social-card {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.team-social-container {
+  width: 42px;
+  height: 42px;
+  background-color: #f1f5f9;
+  /* slate-100 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  /* slate-200 */
+}
+
+.team-social-container:hover {
+  background-color: var(--brand-accent);
+  transition-duration: 0.3s;
+  transform: scale(1.1);
+  border-color: var(--brand-accent);
+}
+
+.team-social-container:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.team-social-svg {
+  width: 18px;
+  height: 18px;
+  color: #64748b;
+  /* slate-500 */
+  transition: color 0.3s;
+}
+
+.team-social-container:hover .team-social-svg {
+  color: white;
+  animation: team-slide-in-top 0.3s both;
+}
+
+@keyframes team-slide-in-top {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

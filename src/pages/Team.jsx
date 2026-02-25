@@ -113,26 +113,26 @@ const Team = () => {
                                 ))}
                             </div>
 
-                            {/* Social Links - Compact Row */}
-                            <div className="flex justify-center sm:justify-start gap-4 pt-4 border-t border-slate-100 mt-auto">
+                            {/* Social Links - Premium Interactive */}
+                            <div className="team-social-card justify-center sm:justify-start pt-4 border-t border-slate-100 mt-auto">
                                 {member.portfolio && (
-                                    <a href={member.portfolio} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-brand-accent transition-colors p-1" title="Portfolio">
-                                        <Globe className="w-5 h-5" />
+                                    <a href={member.portfolio} target="_blank" rel="noopener noreferrer" className="team-social-container" title="Portfolio">
+                                        <Globe className="team-social-svg" />
                                     </a>
                                 )}
                                 {member.linkedin && (
-                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#0077b5] transition-colors p-1" title="LinkedIn">
-                                        <Linkedin className="w-5 h-5" />
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="team-social-container" title="LinkedIn">
+                                        <Linkedin className="team-social-svg" />
                                     </a>
                                 )}
                                 {member.github && (
-                                    <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors p-1" title="GitHub">
-                                        <Github className="w-5 h-5" />
+                                    <a href={member.github} target="_blank" rel="noopener noreferrer" className="team-social-container" title="GitHub">
+                                        <Github className="team-social-svg" />
                                     </a>
                                 )}
                                 {member.email && (
-                                    <a href={`mailto:${member.email}`} className="text-slate-400 hover:text-red-500 transition-colors p-1" title="Email">
-                                        <Mail className="w-5 h-5" />
+                                    <a href={`mailto:${member.email}`} className="team-social-container" title="Email">
+                                        <Mail className="team-social-svg" />
                                     </a>
                                 )}
                             </div>
