@@ -44,14 +44,25 @@ const Home = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-4 pt-4">
-                                <a
-                                    href="https://forms.gle/xsLyYgHzMiYsp8zx6"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn-primary shadow-xl shadow-blue-500/20 text-lg px-8 py-4"
-                                >
-                                    Join Community <Users className="w-5 h-5" />
-                                </a>
+                                <div className="jc-btn-wrapper">
+                                    <a
+                                        href="https://forms.gle/xsLyYgHzMiYsp8zx6"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="jc-btn"
+                                    >
+                                        <img src="/terminal-logo.png.png" alt="Cyber Sphere" className="jc-btn-logo" />
+                                        <span className="jc-txt-wrapper">
+                                            <span className="jc-txt-1">
+                                                {'Join Community'.split('').map((char, i) => (
+                                                    char === ' '
+                                                        ? <span key={i} className="jc-btn-letter"> </span>
+                                                        : <span key={i} className="jc-btn-letter">{char}</span>
+                                                ))}
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
