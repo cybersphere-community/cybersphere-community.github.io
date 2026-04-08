@@ -1,6 +1,8 @@
-import SEO from '../components/SEO';
 import { Linkedin, Github, Globe, Mail } from 'lucide-react';
-import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
+import ScrollReveal from '../components/ScrollReveal';
+
+
 
 const teamMembers = [
     {
@@ -64,81 +66,80 @@ const Team = () => {
                 keywords="cyber sphere team, core team, volunteers, cybersecurity experts"
             />
 
-            <div className="text-center mb-20">
+            <ScrollReveal className="text-center mb-20">
                 <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-brand-primary tracking-tight">
                     Meet the Team
                 </h1>
                 <p className="text-slate-500 max-w-2xl mx-auto text-lg">
                     The passionate individuals driving the Cyber Sphere mission forward.
                 </p>
-            </div>
+            </ScrollReveal>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {teamMembers.map((member, index) => (
-                    <motion.div
+                    <ScrollReveal
                         key={index}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 hover:border-blue-100 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-8 group backdrop-blur-md"
+                        delay={index % 2 * 0.1}
+                        className="h-full"
                     >
-                        {/* Circular Image */}
-                        <div className="flex-shrink-0 relative">
-                            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-slate-50 shadow-md group-hover:border-brand-accent transition-colors duration-300">
-                                <img
-                                    src={member.image}
-                                    alt={member.name}
-                                    loading="lazy"
-                                    width="128"
-                                    height="128"
-                                    className={`w-full h-full object-cover ${member.objectPosition || 'object-center'} transform  transition-transform duration-700`}
-                                />
+                        <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 hover:border-blue-100 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-8 group backdrop-blur-md h-full">
+                            {/* Circular Image */}
+                            <div className="flex-shrink-0 relative">
+                                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-slate-50 shadow-md group-hover:border-brand-accent transition-colors duration-300">
+                                    <img
+                                        src={member.image}
+                                        alt={member.name}
+                                        loading="lazy"
+                                        width="128"
+                                        height="128"
+                                        className={`w-full h-full object-cover ${member.objectPosition || 'object-center'} transform transition-transform duration-700 group-hover:scale-110`}
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="flex-1 text-center sm:text-left w-full flex flex-col h-full">
+                                <h3 className="text-2xl font-bold text-brand-primary mb-1 group-hover:text-brand-accent transition-colors">
+                                    {member.name}
+                                </h3>
+                                <p className="text-brand-secondary font-medium mb-1 text-sm uppercase tracking-wide">{member.role}</p>
+                                <p className="text-slate-400 text-sm mb-4 italic">{member.university}</p>
+
+                                {/* Interests / Tags */}
+                                <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-6">
+                                    {member.interests.map((interest, idx) => (
+                                        <span key={idx} className="bg-blue-50 text-brand-accent text-xs font-bold px-3 py-1 rounded-full border border-blue-100">
+                                            {interest}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Social Links - Premium Interactive */}
+                                <div className="team-social-card justify-center sm:justify-start pt-4 border-t border-slate-100 mt-auto">
+                                    {member.portfolio && (
+                                        <a href={member.portfolio} target="_blank" rel="noopener noreferrer" className="team-social-container" title="Portfolio">
+                                            <Globe className="team-social-svg" />
+                                        </a>
+                                    )}
+                                    {member.linkedin && (
+                                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="team-social-container" title="LinkedIn">
+                                            <Linkedin className="team-social-svg" />
+                                        </a>
+                                    )}
+                                    {member.github && (
+                                        <a href={member.github} target="_blank" rel="noopener noreferrer" className="team-social-container" title="GitHub">
+                                            <Github className="team-social-svg" />
+                                        </a>
+                                    )}
+                                    {member.email && (
+                                        <a href={`mailto:${member.email}`} className="team-social-container" title="Email">
+                                            <Mail className="team-social-svg" />
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         </div>
-
-                        {/* Content */}
-                        <div className="flex-1 text-center sm:text-left w-full">
-                            <h3 className="text-2xl font-bold text-brand-primary mb-1 group-hover:text-brand-accent transition-colors">
-                                {member.name}
-                            </h3>
-                            <p className="text-brand-secondary font-medium mb-1 text-sm uppercase tracking-wide">{member.role}</p>
-                            <p className="text-slate-400 text-sm mb-4 italic">{member.university}</p>
-
-                            {/* Interests / Tags */}
-                            <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-6">
-                                {member.interests.map((interest, idx) => (
-                                    <span key={idx} className="bg-blue-50 text-brand-accent text-xs font-bold px-3 py-1 rounded-full border border-blue-100">
-                                        {interest}
-                                    </span>
-                                ))}
-                            </div>
-
-                            {/* Social Links - Premium Interactive */}
-                            <div className="team-social-card justify-center sm:justify-start pt-4 border-t border-slate-100 mt-auto">
-                                {member.portfolio && (
-                                    <a href={member.portfolio} target="_blank" rel="noopener noreferrer" className="team-social-container" title="Portfolio">
-                                        <Globe className="team-social-svg" />
-                                    </a>
-                                )}
-                                {member.linkedin && (
-                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="team-social-container" title="LinkedIn">
-                                        <Linkedin className="team-social-svg" />
-                                    </a>
-                                )}
-                                {member.github && (
-                                    <a href={member.github} target="_blank" rel="noopener noreferrer" className="team-social-container" title="GitHub">
-                                        <Github className="team-social-svg" />
-                                    </a>
-                                )}
-                                {member.email && (
-                                    <a href={`mailto:${member.email}`} className="team-social-container" title="Email">
-                                        <Mail className="team-social-svg" />
-                                    </a>
-                                )}
-                            </div>
-                        </div>
-                    </motion.div>
+                    </ScrollReveal>
                 ))}
             </div>
         </div>

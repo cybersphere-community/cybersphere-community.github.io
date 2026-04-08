@@ -1,7 +1,7 @@
 import SEO from '../components/SEO';
-
-
+import ScrollReveal from '../components/ScrollReveal';
 import { Linkedin } from 'lucide-react';
+
 
 const speakers = [
     {
@@ -43,62 +43,68 @@ const Speakers = () => {
                     description="Meet the industry experts and researchers speaking at Cyber Sphere events."
                     keywords="cybersecurity speakers, experts, researchers, industry professionals"
                 />
-                <div className="text-center mb-20">
+                <ScrollReveal className="text-center mb-20">
                     <h1 className="text-4xl sm:text-5xl font-bold text-brand-primary mb-6 tracking-tight">Our Speakers</h1>
                     <p className="text-slate-500 max-w-2xl mx-auto text-lg">
                         Meet the industry experts and researchers leading the conversation.
                     </p>
-                </div>
+                </ScrollReveal>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
                     {speakers.map((speaker, index) => (
-                        <div key={index} className="bg-white rounded-2xl overflow-hidden text-center p-8 shadow-sm border border-slate-200 transition-all duration-300 group flex flex-col h-full backdrop-blur-md">
-                            <div className="w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center p-1 border-2 border-slate-100 group-hover:border-brand-accent transition-colors">
-                                <img
-                                    src={speaker.image}
-                                    alt={speaker.name}
-                                    className="w-full h-full rounded-full object-cover"
-                                />
-                            </div>
-                            <h3 className="text-xl font-bold text-brand-primary mb-2">{speaker.name}</h3>
-                            <p className="text-brand-accent font-bold text-xs uppercase tracking-wide mb-4">{speaker.role}</p>
-                            <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{speaker.description}</p>
-
-                            {speaker.linkedin && (
-                                <div className="mt-auto flex justify-center w-full pb-2">
-                                    <a
-                                        href={speaker.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block"
-                                    >
-                                        <button
-                                            className="group w-12 hover:w-44 h-12 hover:bg-sky-600 relative bg-sky-700 rounded text-neutral-50 duration-700 before:duration-700 before:hover:500 font-bold flex justify-start gap-2 items-center p-2 pr-6 before:absolute before:-z-10 before:left-8 before:hover:left-40 before:w-6 before:h-6 before:bg-sky-700 before:hover:bg-sky-600 before:rotate-45 overflow-hidden transition-all ease-in-out"
-                                        >
-                                            <svg
-                                                y="0"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                x="0"
-                                                width="100"
-                                                viewBox="0 0 100 100"
-                                                preserveAspectRatio="xMidYMid meet"
-                                                height="100"
-                                                className="w-8 h-8 shrink-0 fill-neutral-50"
-                                            >
-                                                <path
-                                                    d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z"
-                                                ></path>
-                                            </svg>
-                                            <span
-                                                className="origin-left inline-flex duration-100 group-hover:duration-300 group-hover:delay-500 opacity-0 group-hover:opacity-100 border-l-2 px-1 transform scale-x-0 group-hover:scale-x-100 transition-all text-sm whitespace-nowrap"
-                                            >
-                                                {speaker.name}
-                                            </span>
-                                        </button>
-                                    </a>
+                        <ScrollReveal
+                            key={index}
+                            delay={index * 0.1}
+                            className="h-full"
+                        >
+                            <div className="bg-white rounded-2xl overflow-hidden text-center p-8 shadow-sm border border-slate-200 transition-all duration-300 group flex flex-col h-full backdrop-blur-md hover:shadow-xl hover:border-brand-accent/30">
+                                <div className="w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center p-1 border-2 border-slate-100 group-hover:border-brand-accent transition-colors duration-500">
+                                    <img
+                                        src={speaker.image}
+                                        alt={speaker.name}
+                                        className="w-full h-full rounded-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                                    />
                                 </div>
-                            )}
-                        </div>
+                                <h3 className="text-xl font-bold text-brand-primary mb-2 transition-colors group-hover:text-brand-accent">{speaker.name}</h3>
+                                <p className="text-brand-accent font-bold text-xs uppercase tracking-wide mb-4">{speaker.role}</p>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{speaker.description}</p>
+
+                                {speaker.linkedin && (
+                                    <div className="mt-auto flex justify-center w-full pb-2">
+                                        <a
+                                            href={speaker.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-block"
+                                        >
+                                            <button
+                                                className="group/btn w-12 hover:w-44 h-12 hover:bg-sky-600 relative bg-sky-700 rounded text-neutral-50 duration-700 before:duration-700 before:hover:500 font-bold flex justify-start gap-2 items-center p-2 pr-6 before:absolute before:-z-10 before:left-8 before:hover:left-40 before:w-6 before:h-6 before:bg-sky-700 before:hover:bg-sky-600 before:rotate-45 overflow-hidden transition-all ease-in-out"
+                                            >
+                                                <svg
+                                                    y="0"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    x="0"
+                                                    width="100"
+                                                    viewBox="0 0 100 100"
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    height="100"
+                                                    className="w-8 h-8 shrink-0 fill-neutral-50"
+                                                >
+                                                    <path
+                                                        d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z"
+                                                    ></path>
+                                                </svg>
+                                                <span
+                                                    className="origin-left inline-flex duration-100 group-hover/btn:duration-300 group-hover/btn:delay-500 opacity-0 group-hover/btn:opacity-100 border-l-2 px-1 transform scale-x-0 group-hover/btn:scale-x-100 transition-all text-sm whitespace-nowrap"
+                                                >
+                                                    {speaker.name}
+                                                </span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
+                        </ScrollReveal>
                     ))}
                 </div>
 

@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Send, Mic, MessageCircle } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
+
+
 
 const CallForSpeakers = () => {
     const [formData, setFormData] = useState({
@@ -49,7 +52,7 @@ const CallForSpeakers = () => {
     };
 
     return (
-        <div className="bg-white rounded-2xl border border-slate-100 p-8 sm:p-12 mt-20">
+        <ScrollReveal className="bg-white rounded-2xl border border-slate-100 p-8 sm:p-12 mt-20 backdrop-blur-md hover:border-brand-accent/30 transition-all duration-300 shadow-sm hover:shadow-xl">
             <div className="flex flex-col md:flex-row gap-12 items-start">
                 <div className="flex-1">
                     <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-50 rounded-full text-brand-accent font-bold text-sm mb-6">
@@ -134,7 +137,7 @@ const CallForSpeakers = () => {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button type="submit" className="flex-1 btn-primary justify-center text-lg py-3 shadow-lg shadow-blue-500/20  group">
                                 <span>Submit via Email</span>
-                                <Send size={18} className="ml-2  transition-transform" />
+                                <Send size={18} className="ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                             </button>
 
                             <button
@@ -143,13 +146,13 @@ const CallForSpeakers = () => {
                                 className="flex-1 inline-flex items-center justify-center text-lg font-bold text-white bg-[#25D366] hover:bg-[#22bf5b] py-3 rounded-xl shadow-lg shadow-green-500/20 transition-all duration-300 group"
                             >
                                 <span>WhatsApp</span>
-                                <MessageCircle size={18} className="ml-2  transition-transform" />
+                                <MessageCircle size={18} className="ml-2 transition-transform group-hover:scale-110" />
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
+        </ScrollReveal>
     );
 };
 

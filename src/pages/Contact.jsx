@@ -1,5 +1,8 @@
 import { Mail, User, MessageSquare, Send } from 'lucide-react';
 import SEO from '../components/SEO';
+import ScrollReveal from '../components/ScrollReveal';
+
+
 
 const Contact = () => {
     return (
@@ -21,21 +24,23 @@ const Contact = () => {
 
                     {/* Left Column: Info */}
                     <div className="text-left space-y-8">
-                        <div>
+                        <ScrollReveal>
                             <h2 className="text-brand-accent font-bold tracking-wide uppercase text-sm mb-2">Connect With Us</h2>
                             <h1 className="text-5xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
                                 Let's Start a <br />
                                 <span className="text-gradient">Conversation.</span>
                             </h1>
-                        </div>
+                        </ScrollReveal>
 
-                        <p className="text-slate-600 text-lg leading-relaxed max-w-lg">
-                            Have a question about our events, articles, or just want to say hello?
-                            We're here to help and collaborate with fellow security enthusiasts.
-                        </p>
+                        <ScrollReveal delay={0.1}>
+                            <p className="text-slate-600 text-lg leading-relaxed max-w-lg">
+                                Have a question about our events, articles, or just want to say hello?
+                                We're here to help and collaborate with fellow security enthusiasts.
+                            </p>
+                        </ScrollReveal>
 
-                        <div className="flex flex-col space-y-6">
-                            <div className="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm transition-all duration-300 transform backdrop-blur-md">
+                        <ScrollReveal delay={0.2} className="flex flex-col space-y-6">
+                            <div className="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm transition-all duration-300 transform backdrop-blur-md hover:border-brand-accent/30 hover:shadow-xl">
                                 <div className="flex items-center gap-5">
                                     <div className="p-3 bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-colors">
                                         <Mail className="h-6 w-6 text-brand-accent" />
@@ -48,11 +53,11 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
 
                     {/* Right Column: Form */}
-                    <div className="lg:pl-10">
+                    <ScrollReveal delay={0.3} className="lg:pl-10">
                         <div className="bg-white/80 backdrop-blur-xl border border-white/50 rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
                             {/* Decorative shiny edge */}
                             <div className="absolute inset-0 border border-white/40 rounded-3xl pointer-events-none"></div>
@@ -110,11 +115,11 @@ const Contact = () => {
                                     className="w-full btn-primary justify-center text-lg py-4 shadow-lg shadow-blue-500/20 group"
                                 >
                                     <span>Send Message</span>
-                                    <Send className="h-5 w-5 ml-2 transition-transform" />
+                                    <Send className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                                 </button>
                             </form>
                         </div>
-                    </div>
+                    </ScrollReveal>
 
                 </div>
             </div>

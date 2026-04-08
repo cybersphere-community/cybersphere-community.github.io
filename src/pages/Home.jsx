@@ -7,6 +7,8 @@ import SEO from '../components/SEO';
 import { upcomingEvents } from '../data/events';
 import CallForSpeakers from '../components/CallForSpeakers';
 import PremiumOrbit from '../components/PremiumOrbit';
+import ScrollReveal from '../components/ScrollReveal';
+
 
 const Home = () => {
     const featuredEvent = upcomingEvents[0];
@@ -30,8 +32,9 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         {/* Left Content - Typography & CTA */}
-                        <div className="text-left space-y-8 animate-fade-in">
+                        <ScrollReveal className="text-left space-y-8" yOffset={40}>
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 shadow-sm">
+
                                 <span className="relative flex h-2.5 w-2.5">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-accent"></span>
@@ -72,12 +75,16 @@ const Home = () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
 
                         {/* Right Content - Modern Visual */}
-                        <div className="relative animate-fade-in flex justify-center items-center h-full min-h-[400px]" style={{ animationDelay: '0.2s' }}>
+                        <ScrollReveal 
+                            className="relative flex justify-center items-center h-full min-h-[400px]" 
+                            delay={0.2}
+                            yOffset={20}
+                        >
                             <PremiumOrbit />
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
@@ -92,19 +99,16 @@ const Home = () => {
                             { label: 'CONTRIBUTORS', value: '5K+' },
                             { label: 'OPEN SOURCE', value: '100%' }
                         ].map((stat, i) => (
-                            <motion.div
+                            <ScrollReveal
                                 key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.4, delay: i * 0.05 }}
+                                delay={i * 0.1}
                                 className="py-8 text-center group cursor-default"
                             >
-                                <div className="text-3xl font-bold text-brand-primary mb-1 transition-transform">
+                                <div className="text-3xl font-bold text-brand-primary mb-1 transition-transform group-hover:scale-110 duration-300">
                                     {stat.value}
                                 </div>
                                 <div className="text-xs text-slate-500 font-bold tracking-widest">{stat.label}</div>
-                            </motion.div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
@@ -113,14 +117,14 @@ const Home = () => {
             {/* Mission Section - Clean Cards */}
             <section className="py-24 bg-brand-light backdrop-blur-md relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="text-center mb-20">
+                    <ScrollReveal className="text-center mb-20">
                         <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
                             Our Mission
                         </h2>
                         <p className="text-slate-500 max-w-2xl mx-auto">
                             Empowering the next generation of defenders through open collaboration.
                         </p>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
@@ -128,13 +132,10 @@ const Home = () => {
                             { icon: Shield, title: 'Community Defense', desc: 'Collaborate on staying safe online. Share strategies to stop the latest cyber threats.' },
                             { icon: Globe, title: 'Global Network', desc: 'Connect with security experts, researchers, and learners from around the world.' }
                         ].map((item, i) => (
-                            <motion.div
+                            <ScrollReveal
                                 key={i}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.4, delay: i * 0.05 }}
-                                className={`bg-white backdrop-blur-md rounded-2xl border border-slate-200 group p-8 ${i === 1 ? 'md:-mt-8' : ''}`}
+                                delay={i * 0.1}
+                                className={`bg-white backdrop-blur-md rounded-2xl border border-slate-200 group p-8 ${i === 1 ? 'md:-mt-8' : ''} hover:border-brand-accent/30 transition-all duration-300 shadow-sm hover:shadow-xl`}
                             >
                                 <div className="w-14 h-14 bg-blue-50 backdrop-blur-md rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
                                     <item.icon className="w-7 h-7 text-brand-accent group-hover:text-white transition-colors duration-300" />
@@ -143,7 +144,7 @@ const Home = () => {
                                 <p className="text-slate-600 leading-relaxed text-sm">
                                     {item.desc}
                                 </p>
-                            </motion.div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
@@ -157,12 +158,8 @@ const Home = () => {
             {/* Featured Event - Clean Design */}
             <section className="py-24 bg-transparent relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.6 }}
-                        className="bg-white backdrop-blur-md rounded-2xl border border-slate-200 overflow-hidden flex flex-col lg:flex-row p-0"
+                    <ScrollReveal
+                        className="bg-white backdrop-blur-md rounded-2xl border border-slate-200 overflow-hidden flex flex-col lg:flex-row p-0 hover:border-brand-accent/30 transition-all duration-300 shadow-lg"
                     >
                         <div className="p-10 sm:p-14 lg:w-1/2 flex flex-col justify-center">
                             <div className="inline-flex items-center gap-2 mb-8">
@@ -200,7 +197,7 @@ const Home = () => {
                                 className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                             />
                         </div>
-                    </motion.div>
+                    </ScrollReveal>
                 </div>
             </section>
 

@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Quote } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
+
+
 
 const quotes = [
     { text: "Security is not a product, but a process.", author: "Bruce Schneier" },
@@ -29,11 +32,11 @@ const SecurityQuotes = () => {
     }, []);
 
     return (
-        <div className="w-full max-w-5xl mx-auto px-4 relative group">
+        <ScrollReveal className="w-full max-w-5xl mx-auto px-4 relative group">
             {/* Background Decor */}
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-100 via-transparent to-red-50 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
 
-            <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-card border border-slate-100 flex flex-col items-center text-center">
+            <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-card border border-slate-100 flex flex-col items-center text-center backdrop-blur-md">
                 <div className="mb-6 relative">
                     <div className="absolute -top-4 -left-6 opacity-10">
                         <Quote size={60} className="text-brand-accent transform -scale-x-100" />
@@ -75,7 +78,7 @@ const SecurityQuotes = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </ScrollReveal>
     );
 };
 
