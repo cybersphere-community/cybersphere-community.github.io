@@ -6,9 +6,16 @@ import { Shield, Users, Calendar, Award, Terminal, Code, Lock, Zap, Cpu, Globe, 
 import SEO from '../components/SEO';
 import { upcomingEvents } from '../data/events';
 import CallForSpeakers from '../components/CallForSpeakers';
+import PremiumOrbit from '../components/PremiumOrbit';
 
 const Home = () => {
     const featuredEvent = upcomingEvents[0];
+
+    const playClickSound = () => {
+        const audio = new Audio('/join-click.ogg');
+        audio.play().catch(err => console.log("Audio play blocked or failed:", err));
+    };
+
     return (
         <div className="min-h-screen bg-transparent text-brand-secondary overflow-hidden font-sans">
             <SEO
@@ -50,6 +57,7 @@ const Home = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="jc-btn"
+                                        onClick={playClickSound}
                                     >
                                         <img src="/terminal-logo.png.png" alt="Cyber Sphere" className="jc-btn-logo" />
                                         <span className="jc-txt-wrapper">
@@ -68,42 +76,7 @@ const Home = () => {
 
                         {/* Right Content - Modern Visual */}
                         <div className="relative animate-fade-in flex justify-center items-center h-full min-h-[400px]" style={{ animationDelay: '0.2s' }}>
-                            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] flex items-center justify-center">
-                                {/* Outer Glow */}
-                                <div className="absolute inset-0 bg-blue-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-
-                                {/* Outer Ring - Orbiting */}
-                                <div className="absolute inset-0 rounded-full border border-slate-200 animate-[spin_20s_linear_infinite]">
-                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-2 rounded-xl shadow-lg border border-slate-100 backdrop-blur-md">
-                                        <Shield className="w-5 h-5 text-brand-accent" />
-                                    </div>
-                                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white p-2 rounded-xl shadow-lg border border-slate-100 backdrop-blur-md">
-                                        <Globe className="w-5 h-5 text-indigo-500" />
-                                    </div>
-                                </div>
-
-                                {/* Inner Ring - Orbiting Reverse */}
-                                <div className="absolute inset-12 sm:inset-16 rounded-full border border-slate-200 animate-[spin_15s_linear_infinite_reverse]">
-                                    <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-white p-2 rounded-xl shadow-lg border border-slate-100 backdrop-blur-md">
-                                        <Terminal className="w-4 h-4 text-slate-700" />
-                                    </div>
-                                    <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-white p-2 rounded-xl shadow-lg border border-slate-100 backdrop-blur-md">
-                                        <Code className="w-4 h-4 text-pink-500" />
-                                    </div>
-                                </div>
-
-                                {/* Central Core */}
-                                <div className="absolute w-40 h-40 sm:w-56 sm:h-56 bg-white/80 backdrop-blur-md rounded-full shadow-[0_8px_32px_rgba(37,99,235,0.15)] flex items-center justify-center border border-white z-10 relative group transition-transform duration-500 animate-float hover:shadow-[0_8px_32px_rgba(37,99,235,0.3)]">
-                                    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-100/50 to-transparent"></div>
-                                    <div className="absolute inset-2 rounded-full border border-white/60"></div>
-                                    <img
-                                        src="/terminal-logo.png.png"
-                                        alt="Cyber Sphere Community Logo - Cybersecurity and Ethical Hacking Hub"
-                                        loading="lazy"
-                                        className="w-20 h-20 sm:w-32 sm:h-32 object-cover rounded-full relative z-20 drop-shadow-lg"
-                                    />
-                                </div>
-                            </div>
+                            <PremiumOrbit />
                         </div>
                     </div>
                 </div>
