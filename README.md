@@ -1,16 +1,33 @@
-# React + Vite
+# 🌐 Cyber Sphere Community Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official digital home for the **Cyber Sphere Community**—a premium platform dedicated to cybersecurity education, community workshops, and research initiatives.
 
-Currently, two official plugins are available:
+## 🚀 Overview
+Cyber Sphere is a community-driven initiative aimed at empowering the next generation of cybersecurity experts through hands-on workshops, technical articles, and collaborative research.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👥 Meet Our Speakers
+We are proud to feature industry experts and researchers who share their knowledge with our community:
 
-## React Compiler
+- **Harsh Kanojia**: Founder & Security Researcher (Offensive Security, Malware Analysis)
+- **Naman Shah**: Security Researcher (IoT Hacking, Router Vulnerabilities)
+- **Brijesh Palta**: Cloud Security Engineer (Cloud Infrastructure, DevSecOps)
+- **Himanshi Shrivastava**: SOC Operations (Incident Response, Threat Intelligence)
+- **S Aravind**: Blue Team Researcher (SIEM Detection, Incident Response, Threat Hunting)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technology Stack
+- **Framework**: React.js + Vite
+- **Styling**: TailwindCSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: GitHub Pages
 
-## Expanding the ESLint configuration
+## 💻 Development
+To run the project locally:
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📜 License
+This project is part of the Cyber Sphere Open Community.
+© 2026 Cyber Sphere. All rights reserved.
