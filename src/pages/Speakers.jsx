@@ -31,6 +31,13 @@ const speakers = [
         image: "/team/himanshi.jpg",
         description: "Conducted hands-on Linux Exploitation Workshop. Specializes in SOC Operations, Threat Intelligence, and Incident Response.",
         linkedin: "https://www.linkedin.com/in/himanshi-shrivastava-8000a5180/"
+    },
+    {
+        name: "S Aravind",
+        role: "Blue Team Researcher",
+        image: "/team/aravind.jpg",
+        description: "Specializing in Blue Team Operations and SIEM detection. Building hands-on expertise in log analysis, threat hunting, and incident response within SOC environments.",
+        linkedin: "https://www.linkedin.com/in/s-aravind-2590b22b0/"
     }
 ];
 
