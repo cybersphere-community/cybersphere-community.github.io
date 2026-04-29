@@ -12,6 +12,42 @@ export const upcomingEvents = [
 
 export const pastEvents = [
     {
+        id: 106,
+        title: "Next-Gen Autonomous Security Platform Evolution: Explore the Future of Cybersecurity",
+        date: "Apr 11, 2026",
+        type: "Workshop",
+        description: "Dive deep into how next-generation autonomous security platforms are redefining cyber defense, shifting from reactive models to intelligent, self-learning systems.",
+        speaker: "S Aravind",
+        speakerUrl: "https://www.linkedin.com/in/s-aravind-2590b22b0/",
+        speakerImage: "/team/aravind.jpg",
+        organizer: "Harsh Kanojia",
+        organizerUrl: "https://www.linkedin.com/in/harsh-kanojia369/",
+        organizerImage: "/team/harsh.jpg",
+        eventPoster: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",
+        presentationLink: "https://docs.google.com/presentation/d/1c7VCsa4rDfHI5sUCDQWeQ5MCxzsZ2Os5/edit?usp=sharing&ouid=113587794034483694144&rtpof=true&sd=true",
+        blogContent: `
+### Context
+We recently explored how next-generation autonomous security platforms are redefining the way organizations defend against cyber threats. The session covered the shift from traditional, reactive security models to intelligent, self-learning systems capable of predicting, preventing, and responding to attacks in real time.
+
+### Workshop Objective
+This session was designed to make complex concepts accessible for students and tech enthusiasts without losing technical depth. The main goals were:
+- Understand AI-Driven Threat Detection
+- Master Modern Threat Landscape Analysis
+- Gain Real-World Cybersecurity Insights
+
+### AI-Driven Threat Detection
+We broke down how artificial intelligence and machine learning are used to identify complex attack patterns, detect anomalies, and automate responses. These systems significantly reduce human effort while increasing accuracy in identifying both known and unknown threats.
+
+### Modern Threat Landscape Analysis
+The session provided a clear understanding of how cyber threats are evolving, from ransomware and zero-day exploits to advanced persistent threats. We explored practical techniques used by security professionals to analyze, categorize, and respond to these challenges effectively.
+
+### Key Takeaways
+- Walk away with actionable knowledge applicable to personal security and career advancement.
+- Learn tools, approaches, and mindsets that align with current industry practices.
+- Go beyond theory with real-world scenarios, case studies, and attack simulations.
+        `
+    },
+    {
         id: 105,
         title: "Linux Exploitation Workshop: CVE-2021-4034 (PwnKit)",
         date: "Feb 21, 2026",

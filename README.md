@@ -14,6 +14,13 @@ We are proud to feature industry experts and researchers who share their knowled
 - **Himanshi Shrivastava**: SOC Operations (Incident Response, Threat Intelligence)
 - **S Aravind**: Blue Team Researcher (SIEM Detection, Incident Response, Threat Hunting)
 
+## 📅 Featured Events & Workshops
+We actively host workshops and technical sessions, including:
+- **Next-Gen Autonomous Security Platform Evolution**: Exploring intelligent, self-learning cyber defense systems.
+- **Linux Exploitation (CVE-2021-4034/PwnKit)**: Deep dive into Polkit privilege escalation.
+- **Cloud Security Fundamentals**: Understanding where cloud systems actually fail.
+- **IoT Hacking**: Hands-on with router-level security failures.
+
 ## 🛠️ Technology Stack
 - **Framework**: React.js + Vite
 - **Styling**: TailwindCSS
