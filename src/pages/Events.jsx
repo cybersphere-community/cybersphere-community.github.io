@@ -70,7 +70,7 @@ const Events = () => {
                                 delay={index * 0.1}
                                 className="w-full"
                             >
-                                <div className="group bg-white rounded-2xl p-8 shadow-sm border border-slate-200 transition-all duration-300 backdrop-blur-md hover:shadow-xl hover:border-brand-accent/30">
+                                <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-slate-100 transition-all duration-300 backdrop-blur-md hover:shadow-xl hover:shadow-brand-accent/10 hover:border-brand-accent/40 hover:-translate-y-1">
                                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
                                         <div className="flex-1">
                                             <span className="inline-block px-4 py-1.5 bg-blue-50 text-brand-accent text-sm font-bold rounded-full mb-5 border border-blue-100">
@@ -123,7 +123,7 @@ const Events = () => {
                                 delay={index * 0.1}
                                 className="h-full"
                             >
-                                <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col h-full transition-all group backdrop-blur-md hover:shadow-xl hover:border-brand-accent/30">
+                                <div className="bg-white rounded-2xl p-8 border-2 border-slate-100 shadow-sm flex flex-col h-full transition-all duration-300 group backdrop-blur-md hover:shadow-xl hover:shadow-brand-accent/10 hover:border-brand-accent/40 hover:-translate-y-1">
                                     <div className="flex justify-between items-start mb-6">
                                         <span className="text-xs font-bold text-brand-accent uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full">{event.type}</span>
                                         <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{event.date}</span>
