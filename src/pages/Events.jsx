@@ -183,9 +183,9 @@ const Events = () => {
                         <div className="flex justify-between items-center mb-12">
                             <button
                                 onClick={() => setSelectedEvent(null)}
-                                className="inline-flex items-center gap-3 text-slate-500 hover:text-brand-accent font-bold transition-colors group"
+                                className="inline-flex items-center gap-4 text-slate-600 hover:text-brand-accent font-bold transition-all group py-2"
                             >
-                                <div className="back-btn">
+                                <div className="back-btn scale-110 sm:scale-125">
                                     <div className="back-btn-box">
                                         <svg className="back-btn-elem" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M2.83 5H6a7 7 0 1 1-1.193 13.897l.471-1.938a5 5 0 1 0 .744-9.959H2.83l2.302 2.302L3.72 10.716 0 7l3.719-3.714L5.131 4.7 2.83 5Z" />
@@ -195,7 +195,7 @@ const Events = () => {
                                         </svg>
                                     </div>
                                 </div>
-                                Back to Events
+                                <span>Back to Events</span>
                             </button>
                             <span className="text-xs font-bold text-slate-300 uppercase tracking-widest">Event Recap</span>
                         </div>

@@ -67,7 +67,7 @@ function App() {
     <ThemeProvider>
       {loading && <LoadingScreen isFadeOut={fadeOut} />}
       <Router>
-        <div className="flex flex-col min-h-screen text-slate-800 transition-colors duration-300">
+        <div className="flex flex-col min-h-screen text-slate-800 transition-colors duration-300 overflow-x-hidden">
           <CyberGlobe />
           <Navbar />
           <main className="flex-grow pt-20 relative z-10">

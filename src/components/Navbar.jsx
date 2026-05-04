@@ -62,13 +62,13 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu */}
-            <div className={`md:hidden transition-all duration-300 ease-in-out absolute w-full overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="bg-white/95 backdrop-blur-xl border-t border-slate-200/50 shadow-lg px-2 pt-2 pb-3 space-y-1 sm:px-3 mx-4 mt-2 rounded-2xl border">
+            <div className={`md:hidden transition-all duration-300 ease-in-out absolute w-full overflow-hidden ${isOpen ? 'max-h-[80vh] opacity-100 shadow-2xl' : 'max-h-0 opacity-0'}`}>
+                <div className="bg-white/95 backdrop-blur-xl border-t border-slate-200/50 px-2 pt-2 pb-3 space-y-1 sm:px-3 mx-4 mt-2 rounded-2xl border shadow-xl">
                     {navigation.map((item) => (
                         <Link
                             key={item.name}
                             to={item.href}
-                            className="text-slate-600 hover:text-brand-accent hover:bg-slate-50 block px-4 py-3 rounded-xl text-base font-medium transition-all"
+                            className="text-slate-600 hover:text-brand-accent hover:bg-slate-50 block px-4 py-3 rounded-xl text-base font-semibold transition-all border border-transparent hover:border-slate-100"
                             onClick={() => setIsOpen(false)}
                         >
                             {item.name}
