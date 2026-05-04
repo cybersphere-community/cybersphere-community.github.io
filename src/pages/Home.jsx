@@ -42,10 +42,10 @@ const Home = () => {
                                 <span className="text-brand-accent text-xs font-bold tracking-widest uppercase">Community Active</span>
                             </div>
 
-                            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-orbitron tracking-tight leading-none flex flex-col items-start gap-0">
+                            <h1 className="text-[2.5rem] sm:text-5xl md:text-7xl font-bold font-orbitron tracking-tight leading-none flex flex-col items-start gap-0">
                                 <span className="hero-cyber-text" data-text="CYBER">CYBER</span>
                                 <span className="hero-sphere-text" data-text="SPHERE">SPHERE</span>
-                                <span className="text-[10px] sm:text-sm md:text-lg text-slate-500 font-sans font-bold tracking-[0.3em] sm:tracking-[0.5em] uppercase mt-2 sm:mt-4 border-t border-slate-200 pt-2 sm:pt-4 w-full text-center">Security Starts With Us</span>
+                                <span className="text-[10px] sm:text-sm md:text-lg text-slate-500 font-sans font-bold tracking-[0.2em] sm:tracking-[0.5em] uppercase mt-2 sm:mt-4 border-t border-slate-200 pt-2 sm:pt-4 w-full text-center">Security Starts With Us</span>
                             </h1>
 
                             <p className="text-xl text-slate-600 max-w-lg leading-relaxed">
@@ -92,7 +92,7 @@ const Home = () => {
             {/* Stats Bar - Minimalist */}
             <div className="border-y border-slate-200/50 bg-white backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100">
+                    <div className="grid grid-cols-2 md:grid-cols-4 md:divide-x divide-slate-100">
                         {[
                             { label: 'MEETUPS', value: '100+' },
                             { label: 'CTFs PLAYED', value: '500+' },

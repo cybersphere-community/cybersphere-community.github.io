@@ -26,7 +26,7 @@ const Contact = () => {
                     <div className="text-left space-y-8">
                         <ScrollReveal>
                             <h2 className="text-brand-accent font-bold tracking-wide uppercase text-sm mb-2">Connect With Us</h2>
-                            <h1 className="text-5xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                            <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
                                 Let's Start a <br />
                                 <span className="text-gradient">Conversation.</span>
                             </h1>
