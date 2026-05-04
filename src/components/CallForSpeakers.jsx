@@ -100,7 +100,7 @@ const CallForSpeakers = () => {
             window.location.href = `mailto:cybersphere.official@outlook.com?subject=${subject}&body=${body}`;
             
             // Clear form
-            setFormData({ name: '', email: '', countryCode: '+91', phone: '', link: '', topic: '', abstract: '' });
+            setFormData({ name: '', email: '', countryCode: '+91 (India)', phone: '', link: '', topic: '', abstract: '' });
         } catch (error) {
             console.error('Error submitting to Google Sheets:', error);
             alert('Failed to save to Google Sheets, but opening email for backup...');
