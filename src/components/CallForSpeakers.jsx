@@ -79,7 +79,10 @@ const CallForSpeakers = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ 
+                    ...formData, 
+                    countryCode: "'" + formData.countryCode 
+                }),
             });
 
             // 2. Also open Email as a backup/confirmation
@@ -129,7 +132,11 @@ const CallForSpeakers = () => {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...formData, method: 'WhatsApp' }),
+                body: JSON.stringify({ 
+                    ...formData, 
+                    countryCode: "'" + formData.countryCode,
+                    method: 'WhatsApp' 
+                }),
             });
         } catch (e) { console.error(e); }
 
