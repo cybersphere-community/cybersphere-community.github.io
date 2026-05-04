@@ -21,7 +21,7 @@ const CallForSpeakers = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        countryCode: '+91',
+        countryCode: '+91 (India)',
         phone: '',
         link: '',
         topic: '',
@@ -216,7 +216,7 @@ const CallForSpeakers = () => {
                                         className="w-28 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 px-3 py-3 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all font-medium"
                                     >
                                         {countryCodes.map(c => (
-                                            <option key={c.code} value={c.code}>{c.code} ({c.name})</option>
+                                            <option key={c.code} value={`${c.code} (${c.name})`}>{c.code} ({c.name})</option>
                                         ))}
                                     </select>
                                     <input
