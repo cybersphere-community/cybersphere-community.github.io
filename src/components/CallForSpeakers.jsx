@@ -215,12 +215,12 @@ const CallForSpeakers = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div>
                                 <label htmlFor="phone" className="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
-                                <div className="flex gap-2">
+                                <div className="flex flex-col sm:flex-row gap-3">
                                     <select
                                         name="countryCode"
                                         value={formData.countryCode}
                                         onChange={handleChange}
-                                        className="w-28 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 px-3 py-3 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all font-medium"
+                                        className="w-full sm:w-40 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 px-3 py-3 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all font-medium appearance-none"
                                     >
                                         {countryCodes.map(c => (
                                             <option key={c.code} value={`${c.code} (${c.name})`}>{c.code} ({c.name})</option>
