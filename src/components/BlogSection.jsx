@@ -110,7 +110,7 @@ const BlogSection = () => {
                         <p className="text-slate-500">Insights from our team of researchers and developers.</p>
                     </div>
                     <div className="flex gap-4">
-                        <a href="https://www.linkedin.com/in/harsh-kanojia-300189178/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-[#0077b5] flex items-center text-sm font-bold transition-all ">
+                        <a href="https://www.linkedin.com/company/cyber-sphere-369/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-[#0077b5] flex items-center text-sm font-bold transition-all ">
                             LinkedIn <ExternalLink className="ml-1 h-4 w-4" />
                         </a>
                         <Link to="/articles" className="text-brand-accent hover:text-blue-700 flex items-center text-sm font-bold transition-all ">
