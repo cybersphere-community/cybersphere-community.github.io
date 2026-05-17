@@ -2,13 +2,13 @@ import SEO from '../components/SEO';
 
 const News = () => {
     return (
-        <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="pt-24 pb-20 sm:pt-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <SEO
                 title="News"
                 description="Latest updates, hackathon announcements, and community news from Cyber Sphere."
                 keywords="cybersecurity news, hackathons, community updates, events, announcements"
             />
-            <h1 className="text-4xl font-bold text-brand-primary mb-8 tracking-tight">Latest News</h1>
+            <h1 className="text-4xl font-extrabold text-slate-900 mb-8 tracking-tight uppercase">LATEST <span className="text-gradient">NEWS</span></h1>
             <div className="space-y-6">
                 <article className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition-all duration-300 backdrop-blur-md">
                     <span className="inline-block px-3 py-1 bg-green-50 text-green-600 text-xs font-bold rounded-full mb-4 border border-green-100 uppercase tracking-wider">Announcement</span>

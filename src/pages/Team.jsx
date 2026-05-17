@@ -67,8 +67,8 @@ const Team = () => {
             />
 
             <ScrollReveal className="text-center mb-20">
-                <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-brand-primary tracking-tight">
-                    Meet the Team
+                <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 text-slate-900 tracking-tight uppercase">
+                    MEET THE <span className="text-gradient">TEAM</span>
                 </h1>
                 <p className="text-slate-500 max-w-2xl mx-auto text-lg">
                     The passionate individuals driving the Cyber Sphere mission forward.

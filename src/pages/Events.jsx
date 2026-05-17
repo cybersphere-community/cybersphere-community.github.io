@@ -60,7 +60,7 @@ const Events = () => {
                 <section className="mb-20">
                     <ScrollReveal className="flex items-center mb-10 gap-4">
                         <div className="h-10 w-1.5 bg-brand-accent rounded-full"></div>
-                        <h1 className="text-3xl sm:text-5xl font-bold text-brand-primary tracking-tight">Upcoming Events</h1>
+                        <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight uppercase">UPCOMING <span className="text-gradient">EVENTS</span></h1>
                     </ScrollReveal>
 
                     <div className="grid gap-8">
@@ -109,11 +109,11 @@ const Events = () => {
                     </div>
                 </section>
 
-                {/* Event Legacy Section */}
+                {/* Past Events Section */}
                 <section>
                     <ScrollReveal className="flex items-center mb-10 gap-4">
                         <div className="h-10 w-1.5 bg-slate-300 rounded-full"></div>
-                        <h2 className="text-3xl sm:text-4xl font-bold text-slate-400">Event Legacy</h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 uppercase">PAST <span className="text-gradient">EVENTS</span></h2>
                     </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

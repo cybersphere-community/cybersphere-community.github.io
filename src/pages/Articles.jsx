@@ -119,14 +119,14 @@ const Articles = () => {
             />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal className="text-center mb-16">
-                    <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-brand-primary tracking-tight">
-                        Cyber Insights
+                    <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 text-slate-900 tracking-tight uppercase">
+                        CYBER <span className="text-gradient">INSIGHTS</span>
                     </h1>
                     <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed mb-8">
                         Deep dives into cybersecurity, cloud defense, and threat evasion.
                         Aggregation of articles from Dev.to and Medium.
                     </p>
-                    <a href="https://www.linkedin.com/in/harsh-kanojia-300189178/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077b5] hover:bg-[#006097] text-white rounded-xl shadow-md transition-all font-bold">
+                    <a href="https://www.linkedin.com/company/cyber-sphere-369/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077b5] hover:bg-[#006097] text-white rounded-xl shadow-md transition-all font-bold">
                         <ExternalLink className="h-4 w-4" />
                         Connect on LinkedIn
                     </a>

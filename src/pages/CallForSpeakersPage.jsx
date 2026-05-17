@@ -12,12 +12,7 @@ const CallForSpeakersPage = () => {
                 keywords="call for speakers, cybersecurity talks, submit proposal, speaker application"
             />
             <div className="max-w-7xl mx-auto">
-                <ScrollReveal className="text-center mb-12">
-                    <h1 className="text-4xl sm:text-5xl font-bold text-brand-primary mb-6 tracking-tight">Speak at Cyber Sphere</h1>
-                    <p className="text-slate-500 text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
-                        Share your expertise, research, and passion with a community of security enthusiasts.
-                    </p>
-                </ScrollReveal>
+
                 <ScrollReveal delay={0.2}>
                     <CallForSpeakers />
                 </ScrollReveal>
