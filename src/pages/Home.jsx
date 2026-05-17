@@ -27,7 +27,7 @@ const Home = () => {
             />
 
             {/* Hero Section - Premium Interactive 3D */}
-            <section className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-12 overflow-hidden bg-transparent">
+            <section className="relative lg:min-h-[90vh] flex lg:items-center pt-20 pb-12 overflow-hidden bg-transparent">
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -42,13 +42,13 @@ const Home = () => {
                                 <span className="text-brand-accent text-xs font-bold tracking-widest uppercase">Community Active</span>
                             </div>
 
-                            <h1 className="text-[2.5rem] sm:text-5xl md:text-7xl font-bold font-orbitron tracking-tight leading-none flex flex-col items-start gap-0">
+                            <h1 className="text-[3.5rem] sm:text-6xl md:text-7xl font-bold font-orbitron tracking-tight leading-none flex flex-col items-start gap-0 w-full">
                                 <span className="hero-cyber-text" data-text="CYBER">CYBER</span>
                                 <span className="hero-sphere-text" data-text="SPHERE">SPHERE</span>
-                                <span className="text-[10px] sm:text-sm md:text-lg text-slate-500 font-sans font-bold tracking-[0.2em] sm:tracking-[0.5em] uppercase mt-2 sm:mt-4 border-t border-slate-200 pt-2 sm:pt-4 w-full text-center">Security Starts With Us</span>
+                                <span className="text-[10px] sm:text-sm md:text-lg text-slate-500 font-sans font-bold tracking-[0.2em] sm:tracking-[0.5em] uppercase mt-2 sm:mt-4 border-t border-slate-200 pt-2 sm:pt-4 w-full text-left">Security Starts With Us</span>
                             </h1>
 
-                            <p className="text-xl text-slate-600 max-w-lg leading-relaxed">
+                            <p className="text-base sm:text-xl text-slate-600 max-w-lg leading-relaxed">
                                 An open collective for hackers, researchers, and defenders.
                                 <span className="font-semibold text-slate-800"> No corporate agenda.</span> Just pure security research and knowledge sharing.
                             </p>
@@ -79,7 +79,7 @@ const Home = () => {
 
                         {/* Right Content - Modern Visual */}
                         <ScrollReveal 
-                            className="relative flex justify-center items-center h-full min-h-[400px]" 
+                            className="hidden lg:flex relative justify-center items-center h-full min-h-[400px]" 
                             delay={0.2}
                             yOffset={20}
                         >

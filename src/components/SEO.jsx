@@ -14,7 +14,7 @@ const SEO = ({ title, description, canonical, keywords, image }) => {
         "logo": `${siteUrl}/terminal-logo.png.png`,
         "description": "An open collective for ethical hackers and security researchers.",
         "sameAs": [
-            "https://linkedin.com/company/cybersphere",
+            "https://www.linkedin.com/company/cyber-sphere-369/?viewAsMember=true",
             "https://github.com/cybersphere-community"
         ],
         "contactPoint": {

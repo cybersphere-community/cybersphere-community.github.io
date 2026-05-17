@@ -32,6 +32,11 @@ const PageLoader = () => (
 const AnimatedRoutes = () => {
   const location = useLocation();
 
+  useEffect(() => {
+    // Ensure the window instantly scrolls to the top on route change
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [location.pathname]);
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>

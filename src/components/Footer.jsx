@@ -22,14 +22,14 @@ const Footer = () => {
                         <h3 className="text-lg font-bold text-slate-900 mb-5">Quick Links</h3>
                         <ul className="space-y-3 text-sm text-slate-500">
                             <li>
-                                <a href="/events" className="hover:text-brand-accent transition-colors inline-block">
+                                <Link to="/events" className="hover:text-brand-accent transition-colors inline-block">
                                     Upcoming Events
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/team" className="hover:text-brand-accent transition-colors inline-block">
+                                <Link to="/team" className="hover:text-brand-accent transition-colors inline-block">
                                     Join the Team
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                             <a href="#" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white  rounded-lg border border-transparent hover:border-slate-100">
                                 <Twitter className="h-6 w-6" />
                             </a>
-                            <a href="#" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white  rounded-lg border border-transparent hover:border-slate-100">
+                            <a href="https://www.linkedin.com/company/cyber-sphere-369/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white  rounded-lg border border-transparent hover:border-slate-100">
                                 <Linkedin className="h-6 w-6" />
                             </a>
                             <a href="mailto:cybersphere.official@outlook.com" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white  rounded-lg border border-transparent hover:border-slate-100">

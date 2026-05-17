@@ -1,4 +1,4 @@
-import { Mail, User, MessageSquare, Send } from 'lucide-react';
+import { Mail, User, MessageSquare, Send, Linkedin } from 'lucide-react';
 import SEO from '../components/SEO';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -26,9 +26,9 @@ const Contact = () => {
                     <div className="text-left space-y-8">
                         <ScrollReveal>
                             <h2 className="text-brand-accent font-bold tracking-wide uppercase text-sm mb-2">Connect With Us</h2>
-                            <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                                Let's Start a <br />
-                                <span className="text-gradient">Conversation.</span>
+                            <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight uppercase">
+                                LET'S START A <br />
+                                <span className="text-gradient">CONVERSATION.</span>
                             </h1>
                         </ScrollReveal>
 
@@ -53,6 +53,20 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm transition-all duration-300 transform backdrop-blur-md hover:border-[#0077b5]/30 hover:shadow-xl">
+                                <div className="flex items-center gap-5">
+                                    <div className="p-3 bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-colors">
+                                        <Linkedin className="h-6 w-6 text-[#0077b5]" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Follow on LinkedIn</p>
+                                        <a href="https://www.linkedin.com/company/cyber-sphere-369/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-lg sm:text-xl text-slate-800 font-bold hover:text-[#0077b5] transition-colors break-all">
+                                            Cyber Sphere
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </ScrollReveal>
                     </div>
 
@@ -62,7 +76,7 @@ const Contact = () => {
                             {/* Decorative shiny edge */}
                             <div className="absolute inset-0 border border-white/40 rounded-3xl pointer-events-none"></div>
 
-                            <h3 className="text-2xl font-bold text-slate-800 mb-6">Send a Message</h3>
+                            <h3 className="text-2xl font-extrabold text-slate-900 mb-6 uppercase">SEND A <span className="text-gradient">MESSAGE</span></h3>
 
                             <form className="space-y-6">
                                 <div className="space-y-2">

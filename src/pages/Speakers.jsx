@@ -38,12 +38,20 @@ const speakers = [
         image: "/team/aravind.jpg",
         description: "Specializing in Blue Team Operations and SIEM detection. Building hands-on expertise in log analysis, threat hunting, and incident response within SOC environments.",
         linkedin: "https://www.linkedin.com/in/s-aravind-2590b22b0/"
+    },
+    {
+        name: "Gauthaman Sakthivel",
+        role: "Secure Azure Data Engineer",
+        image: "/team/gauthaman.jpg",
+        description: "Specializing in Secure ADF pipelines, Key Vault & RBAC. Delivered the talk on 'AI Security: Threats, Risks & Defense'.",
+        linkedin: "https://www.linkedin.com/in/gauthamansakthivel/",
+        presentation: "https://docs.google.com/presentation/d/1R8Fz_CeKMWf_t4G0ROQG7JQHuAzgJQJf/edit?usp=sharing&ouid=113587794034483694144&rtpof=true&sd=true"
     }
 ];
 
 const Speakers = () => {
     return (
-        <div className="min-h-screen bg-transparent py-24 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className="min-h-screen bg-transparent pt-24 pb-24 sm:pt-32 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-7xl mx-auto">
                 <SEO
                     title="Our Speakers"
@@ -51,7 +59,7 @@ const Speakers = () => {
                     keywords="cybersecurity speakers, experts, researchers, industry professionals"
                 />
                 <ScrollReveal className="text-center mb-20">
-                    <h1 className="text-4xl sm:text-5xl font-bold text-brand-primary mb-6 tracking-tight">Our Speakers</h1>
+                    <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight uppercase">OUR <span className="text-gradient">SPEAKERS</span></h1>
                     <p className="text-slate-500 max-w-2xl mx-auto text-lg">
                         Meet the industry experts and researchers leading the conversation.
                     </p>
@@ -85,7 +93,7 @@ const Speakers = () => {
                                             className="inline-block"
                                         >
                                             <button
-                                                className="group/btn w-12 hover:w-44 h-12 hover:bg-sky-600 relative bg-sky-700 rounded text-neutral-50 duration-700 before:duration-700 before:hover:500 font-bold flex justify-start gap-2 items-center p-2 pr-6 before:absolute before:-z-10 before:left-8 before:hover:left-40 before:w-6 before:h-6 before:bg-sky-700 before:hover:bg-sky-600 before:rotate-45 overflow-hidden transition-all ease-in-out"
+                                                className="group/btn w-12 hover:w-64 h-12 hover:bg-sky-600 relative bg-sky-700 rounded text-neutral-50 duration-700 before:duration-700 before:hover:500 font-bold flex justify-start gap-2 items-center p-2 group-hover/btn:pr-6 before:absolute before:-z-10 before:left-8 before:hover:left-56 before:w-6 before:h-6 before:bg-sky-700 before:hover:bg-sky-600 before:rotate-45 overflow-hidden transition-all ease-in-out"
                                             >
                                                 <svg
                                                     y="0"
@@ -98,7 +106,7 @@ const Speakers = () => {
                                                     className="w-8 h-8 shrink-0 fill-neutral-50"
                                                 >
                                                     <path
-                                                        d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z"
+                                                        d="M30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,10,17.79,25.68Z"
                                                     ></path>
                                                 </svg>
                                                 <span
