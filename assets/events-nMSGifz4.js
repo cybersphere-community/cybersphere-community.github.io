@@ -1,4 +1,24 @@
-const e=[{id:1,title:"Zero-Day Research Symposium",date:"Oct 25, 2026",time:"18:00 IST",location:"Online / Microsoft Teams",type:"Symposium",description:"Deep dive into kernel exploitation and heap spraying techniques. Bring your laptops. Subject: Zero-Day Exploitation Tactics."}],t=[{id:106,title:"Next-Gen Autonomous Security Platform Evolution: Explore the Future of Cybersecurity",date:"Apr 11, 2026",type:"Workshop",description:"Dive deep into how next-generation autonomous security platforms are redefining cyber defense, shifting from reactive models to intelligent, self-learning systems.",speaker:"S Aravind",speakerUrl:"https://www.linkedin.com/in/s-aravind-2590b22b0/",speakerImage:"/team/aravind.jpg",organizer:"Harsh Kanojia",organizerUrl:"https://www.linkedin.com/in/harsh-kanojia369/",organizerImage:"/team/harsh.jpg",eventPoster:"https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",presentationLink:"https://docs.google.com/presentation/d/1c7VCsa4rDfHI5sUCDQWeQ5MCxzsZ2Os5/edit?usp=sharing&ouid=113587794034483694144&rtpof=true&sd=true",blogContent:`
+const e=[{id:1,title:"Zero-Day Research Symposium",date:"Oct 25, 2026",time:"18:00 IST",location:"Online / Microsoft Teams",type:"Symposium",description:"Deep dive into kernel exploitation and heap spraying techniques. Bring your laptops. Subject: Zero-Day Exploitation Tactics."}],t=[{id:107,title:"AI Security: Threats, Risks & Defense",date:"May 16, 2026",type:"Workshop",description:"Insightful workshop exploring the AI threat landscape, focusing on AI security risks, defense mechanisms, Secure ADF pipelines, Key Vault, and RBAC strategies.",speaker:"Gauthaman Sakthivel",speakerUrl:"https://www.linkedin.com/in/gauthamansakthivel/",speakerImage:"/team/gauthaman.jpg",organizer:"Harsh Kanojia",organizerUrl:"https://www.linkedin.com/in/harsh-kanojia369/",organizerImage:"/team/harsh.jpg",eventPoster:"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000",presentationLink:"https://docs.google.com/presentation/d/1R8Fz_CeKMWf_t4G0ROQG7JQHuAzgJQJf/edit?usp=sharing&ouid=113587794034483694144&rtpof=true&sd=true",blogContent:`
+### Context
+We recently hosted an insightful AI Security workshop within the Cyber Sphere Community, focusing on the intersection of Artificial Intelligence and modern cybersecurity. Led by Gauthaman Sakthivel, a Secure Azure Data Engineer, the session provided a deep dive into the emerging threats targeting AI models, associated risks in enterprise environments, and robust defense mechanisms.
+
+### Workshop Objective
+The session was structured to bridge the gap between AI development and cloud security, equipping attendees with practical knowledge. The core objectives were:
+- Understand the AI Threat Landscape and Model Vulnerabilities
+- Explore Data Pipeline Security and RBAC in Azure
+- Implement Defenses for Enterprise AI Applications
+
+### AI Threat Landscape & Risks
+We examined how artificial intelligence introduces new attack surfaces, including prompt injection, data poisoning, and model inversion. The discussion highlighted why securing the underlying data pipelines and infrastructure is just as critical as securing the models themselves.
+
+### Securing Cloud Data Pipelines
+Drawing from real-world expertise, Gauthaman demonstrated best practices for securing cloud environments where AI data resides. Key topics included configuring Secure Azure Data Factory (ADF) pipelines, leveraging Azure Key Vault for secrets management, and enforcing strict Role-Based Access Control (RBAC).
+
+### Key Takeaways
+- Securing AI requires a holistic approach covering data pipelines, infrastructure, and model interaction.
+- Proper secrets management and RBAC are the first line of defense against cloud-based AI breaches.
+- Continuous monitoring and threat modeling are essential as AI technologies evolve rapidly.
+        `},{id:106,title:"Next-Gen Autonomous Security Platform Evolution: Explore the Future of Cybersecurity",date:"Apr 11, 2026",type:"Workshop",description:"Dive deep into how next-generation autonomous security platforms are redefining cyber defense, shifting from reactive models to intelligent, self-learning systems.",speaker:"S Aravind",speakerUrl:"https://www.linkedin.com/in/s-aravind-2590b22b0/",speakerImage:"/team/aravind.jpg",organizer:"Harsh Kanojia",organizerUrl:"https://www.linkedin.com/in/harsh-kanojia369/",organizerImage:"/team/harsh.jpg",eventPoster:"https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",presentationLink:"https://docs.google.com/presentation/d/1c7VCsa4rDfHI5sUCDQWeQ5MCxzsZ2Os5/edit?usp=sharing&ouid=113587794034483694144&rtpof=true&sd=true",blogContent:`
 ### Context
 We recently explored how next-generation autonomous security platforms are redefining the way organizations defend against cyber threats. The session covered the shift from traditional, reactive security models to intelligent, self-learning systems capable of predicting, preventing, and responding to attacks in real time.
 
