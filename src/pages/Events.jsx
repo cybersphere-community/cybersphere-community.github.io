@@ -57,63 +57,65 @@ const Events = () => {
             />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Upcoming Events Section */}
-                <section className="mb-20">
-                    <ScrollReveal className="flex items-center mb-10 gap-4">
-                        <div className="h-10 w-1.5 bg-brand-accent rounded-full"></div>
-                        <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight uppercase">UPCOMING <span className="text-gradient">EVENTS</span></h1>
-                    </ScrollReveal>
+                {upcomingEvents.length > 0 && (
+                    <section className="mb-20">
+                        <ScrollReveal className="flex items-center mb-10 gap-4">
+                            <div className="h-10 w-1.5 bg-brand-accent rounded-full"></div>
+                            <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight uppercase">UPCOMING <span className="text-gradient">EVENTS</span></h1>
+                        </ScrollReveal>
 
-                    <div className="grid gap-8">
-                        {upcomingEvents.map((event, index) => (
-                            <ScrollReveal
-                                key={event.id}
-                                delay={index * 0.1}
-                                className="w-full"
-                            >
-                                <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-slate-100 transition-all duration-300 backdrop-blur-md hover:shadow-xl hover:shadow-brand-accent/10 hover:border-brand-accent/40 hover:-translate-y-1">
-                                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-                                        <div className="flex-1">
-                                            <span className="inline-block px-4 py-1.5 bg-blue-50 text-brand-accent text-sm font-bold rounded-full mb-5 border border-blue-100">
-                                                {event.type}
-                                            </span>
-                                            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-brand-primary group-hover:text-brand-accent transition-colors">
-                                                {event.title}
-                                            </h2>
-                                            <p className="text-slate-500 mb-6 max-w-2xl leading-relaxed text-lg">
-                                                {event.description}
-                                            </p>
-                                            <div className="flex flex-wrap gap-6 text-sm font-medium text-slate-500">
-                                                <div className="flex items-center gap-2">
-                                                    <Calendar className="h-5 w-5 text-brand-accent" />
-                                                    {event.date}
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <Clock className="h-5 w-5 text-brand-accent" />
-                                                    {event.time}
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <MapPin className="h-5 w-5 text-brand-accent" />
-                                                    {event.location}
+                        <div className="grid gap-8">
+                            {upcomingEvents.map((event, index) => (
+                                <ScrollReveal
+                                    key={event.id}
+                                    delay={index * 0.1}
+                                    className="w-full"
+                                >
+                                    <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-slate-100 transition-all duration-300 backdrop-blur-md hover:shadow-xl hover:shadow-brand-accent/10 hover:border-brand-accent/40 hover:-translate-y-1">
+                                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                                            <div className="flex-1">
+                                                <span className="inline-block px-4 py-1.5 bg-blue-50 text-brand-accent text-sm font-bold rounded-full mb-5 border border-blue-100">
+                                                    {event.type}
+                                                </span>
+                                                <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-brand-primary group-hover:text-brand-accent transition-colors">
+                                                    {event.title}
+                                                </h2>
+                                                <p className="text-slate-500 mb-6 max-w-2xl leading-relaxed text-lg">
+                                                    {event.description}
+                                                </p>
+                                                <div className="flex flex-wrap gap-6 text-sm font-medium text-slate-500">
+                                                    <div className="flex items-center gap-2">
+                                                        <Calendar className="h-5 w-5 text-brand-accent" />
+                                                        {event.date}
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <Clock className="h-5 w-5 text-brand-accent" />
+                                                        {event.time}
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <MapPin className="h-5 w-5 text-brand-accent" />
+                                                        {event.location}
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div>
-                                            <a href="https://forms.gle/xsLyYgHzMiYsp8zx6" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-brand-primary text-white font-bold rounded-xl shadow-lg hover:bg-brand-accent transition-all duration-300 transform">
-                                                Register Now
-                                            </a>
+                                            <div>
+                                                <a href="https://forms.gle/xsLyYgHzMiYsp8zx6" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-brand-primary text-white font-bold rounded-xl shadow-lg hover:bg-brand-accent transition-all duration-300 transform">
+                                                    Register Now
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </ScrollReveal>
-                        ))}
-                    </div>
-                </section>
+                                </ScrollReveal>
+                            ))}
+                        </div>
+                    </section>
+                )}
 
                 {/* Past Events Section */}
                 <section>
                     <ScrollReveal className="flex items-center mb-10 gap-4">
                         <div className="h-10 w-1.5 bg-slate-300 rounded-full"></div>
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 uppercase">PAST <span className="text-gradient">EVENTS</span></h2>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 uppercase">EVENTS <span className="text-gradient">CONDUCTED</span></h2>
                     </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

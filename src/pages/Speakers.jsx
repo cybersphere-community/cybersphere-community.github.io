@@ -46,6 +46,13 @@ const speakers = [
         description: "Specializing in Secure ADF pipelines, Key Vault & RBAC. Delivered the talk on 'AI Security: Threats, Risks & Defense'.",
         linkedin: "https://www.linkedin.com/in/gauthamansakthivel/",
         presentation: "https://docs.google.com/presentation/d/1R8Fz_CeKMWf_t4G0ROQG7JQHuAzgJQJf/edit?usp=sharing&ouid=113587794034483694144&rtpof=true&sd=true"
+    },
+    {
+        name: "Kanhaiya",
+        role: "IT Security Analyst",
+        image: "/team/kanhaiya.jpg",
+        description: "Specializing in Web and Mobile (Android) Application Security testing, network security, and secure configuration reviews. Focused on hardening enterprise security postures.",
+        linkedin: "https://www.linkedin.com/in/kanhaiya-666/"
     }
 ];
 

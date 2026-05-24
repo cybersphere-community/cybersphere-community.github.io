@@ -156,50 +156,52 @@ const Home = () => {
             </div>
 
             {/* Featured Event - Clean Design */}
-            <section className="py-24 bg-transparent relative">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <ScrollReveal
-                        className="bg-white backdrop-blur-md rounded-2xl border border-slate-200 overflow-hidden flex flex-col lg:flex-row p-0 hover:border-brand-accent/30 transition-all duration-300 shadow-lg"
-                    >
-                        <div className="p-10 sm:p-14 lg:w-1/2 flex flex-col justify-center">
-                            <div className="inline-flex items-center gap-2 mb-8">
-                                <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
-                                <span className="text-brand-accent font-bold text-sm tracking-widest uppercase">Next Gathering</span>
+            {featuredEvent && (
+                <section className="py-24 bg-transparent relative">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <ScrollReveal
+                            className="bg-white backdrop-blur-md rounded-2xl border border-slate-200 overflow-hidden flex flex-col lg:flex-row p-0 hover:border-brand-accent/30 transition-all duration-300 shadow-lg"
+                        >
+                            <div className="p-10 sm:p-14 lg:w-1/2 flex flex-col justify-center">
+                                <div className="inline-flex items-center gap-2 mb-8">
+                                    <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                                    <span className="text-brand-accent font-bold text-sm tracking-widest uppercase">Next Gathering</span>
+                                </div>
+
+                                <h3 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                                    {featuredEvent.title}
+                                </h3>
+                                <p className="text-slate-600 mb-10 text-lg">
+                                    {featuredEvent.description}
+                                </p>
+
+                                <div className="grid grid-cols-2 gap-8 mb-10 border-t border-slate-200 pt-8">
+                                    <div>
+                                        <span className="block text-slate-500 text-xs font-bold tracking-wider mb-2">DATE</span>
+                                        <span className="text-slate-900 font-semibold text-lg">{featuredEvent.date}</span>
+                                    </div>
+                                    <div>
+                                        <span className="block text-slate-500 text-xs font-bold tracking-wider mb-2">TIME</span>
+                                        <span className="text-slate-900 font-semibold text-lg">{featuredEvent.time}</span>
+                                    </div>
+                                </div>
+
+                                <Link to="/events" className="inline-flex items-center text-brand-accent font-bold hover:gap-4 transition-all gap-2 group">
+                                    View Full Event Details <ArrowRightWrapper className="w-5 h-5 transition-transform" />
+                                </Link>
                             </div>
 
-                            <h3 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-                                {featuredEvent ? featuredEvent.title : "Upcoming Event"}
-                            </h3>
-                            <p className="text-slate-600 mb-10 text-lg">
-                                {featuredEvent ? featuredEvent.description : "Stay tuned for updates."}
-                            </p>
-
-                            <div className="grid grid-cols-2 gap-8 mb-10 border-t border-slate-200 pt-8">
-                                <div>
-                                    <span className="block text-slate-500 text-xs font-bold tracking-wider mb-2">DATE</span>
-                                    <span className="text-slate-900 font-semibold text-lg">{featuredEvent ? featuredEvent.date : "TBA"}</span>
-                                </div>
-                                <div>
-                                    <span className="block text-slate-500 text-xs font-bold tracking-wider mb-2">TIME</span>
-                                    <span className="text-slate-900 font-semibold text-lg">{featuredEvent ? featuredEvent.time : "TBA"}</span>
-                                </div>
+                            <div className="lg:w-1/2 bg-slate-100 backdrop-blur-md relative min-h-[300px]">
+                                <img
+                                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000"
+                                    alt="Event"
+                                    className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                />
                             </div>
-
-                            <Link to="/events" className="inline-flex items-center text-brand-accent font-bold hover:gap-4 transition-all gap-2 group">
-                                View Full Event Details <ArrowRightWrapper className="w-5 h-5 transition-transform" />
-                            </Link>
-                        </div>
-
-                        <div className="lg:w-1/2 bg-slate-100 backdrop-blur-md relative min-h-[300px]">
-                            <img
-                                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000"
-                                alt="Event"
-                                className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                            />
-                        </div>
-                    </ScrollReveal>
-                </div>
-            </section>
+                        </ScrollReveal>
+                    </div>
+                </section>
+            )}
 
             {/* Call For Speakers */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
