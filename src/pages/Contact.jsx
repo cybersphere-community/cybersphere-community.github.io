@@ -1,4 +1,4 @@
-import { Mail, User, MessageSquare, Send, Linkedin } from 'lucide-react';
+import { Mail, User, MessageSquare, Send, Linkedin, Youtube } from 'lucide-react';
 import SEO from '../components/SEO';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -62,6 +62,20 @@ const Contact = () => {
                                     <div>
                                         <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Follow on LinkedIn</p>
                                         <a href="https://www.linkedin.com/company/cyber-sphere-369/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-lg sm:text-xl text-slate-800 font-bold hover:text-[#0077b5] transition-colors break-all">
+                                            Cyber Sphere
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm transition-all duration-300 transform backdrop-blur-md hover:border-[#ff0000]/30 hover:shadow-xl">
+                                <div className="flex items-center gap-5">
+                                    <div className="p-3 bg-red-50 rounded-xl group-hover:bg-red-100 transition-colors">
+                                        <Youtube className="h-6 w-6 text-[#ff0000]" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Subscribe on YouTube</p>
+                                        <a href="https://www.youtube.com/@CyberSphere-x2e" target="_blank" rel="noopener noreferrer" className="text-lg sm:text-xl text-slate-800 font-bold hover:text-[#ff0000] transition-colors break-all">
                                             Cyber Sphere
                                         </a>
                                     </div>

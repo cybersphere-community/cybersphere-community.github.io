@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Github, Linkedin, Twitter, Shield } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, Shield, Youtube } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -44,6 +44,9 @@ const Footer = () => {
                             </a>
                             <a href="https://www.linkedin.com/company/cyber-sphere-369/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white  rounded-lg border border-transparent hover:border-slate-100">
                                 <Linkedin className="h-6 w-6" />
+                            </a>
+                            <a href="https://www.youtube.com/@CyberSphere-x2e" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white  rounded-lg border border-transparent hover:border-slate-100" title="YouTube">
+                                <Youtube className="h-6 w-6" />
                             </a>
                             <a href="mailto:cybersphere.official@outlook.com" className="text-slate-400 hover:text-brand-accent transition-colors p-2 hover:bg-white  rounded-lg border border-transparent hover:border-slate-100">
                                 <Mail className="h-6 w-6" />

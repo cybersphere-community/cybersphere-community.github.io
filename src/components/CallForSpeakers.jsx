@@ -37,6 +37,7 @@ const CallForSpeakers = () => {
         const newErrors = {};
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const phoneRegex = /^\d{10,15}$/;
+        // eslint-disable-next-line no-useless-escape
         const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
 
         if (formData.name.length < 2) newErrors.name = 'Name must be at least 2 characters';
