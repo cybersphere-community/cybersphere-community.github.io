@@ -1,4 +1,24 @@
-const e=[{id:1,title:"Zero-Day Research Symposium",date:"Oct 25, 2026",time:"18:00 IST",location:"Online / Microsoft Teams",type:"Symposium",description:"Deep dive into kernel exploitation and heap spraying techniques. Bring your laptops. Subject: Zero-Day Exploitation Tactics."}],t=[{id:107,title:"AI Security: Threats, Risks & Defense",date:"May 16, 2026",type:"Workshop",description:"Insightful workshop exploring the AI threat landscape, focusing on AI security risks, defense mechanisms, Secure ADF pipelines, Key Vault, and RBAC strategies.",speaker:"Gauthaman Sakthivel",speakerUrl:"https://www.linkedin.com/in/gauthamansakthivel/",speakerImage:"/team/gauthaman.jpg",organizer:"Harsh Kanojia",organizerUrl:"https://www.linkedin.com/in/harsh-kanojia369/",organizerImage:"/team/harsh.jpg",eventPoster:"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000",presentationLink:"https://docs.google.com/presentation/d/1R8Fz_CeKMWf_t4G0ROQG7JQHuAzgJQJf/edit?usp=sharing&ouid=113587794034483694144&rtpof=true&sd=true",blogContent:`
+const e=[],t=[{id:108,title:"REAL-WORLD VAPT using BURP SUITE PRO",date:"May 23, 2026",type:"Workshop",description:"Deep dive into real-world Web Application Penetration Testing (VAPT) using Burp Suite Professional. Learn advanced scanning, manual testing, and vulnerability identification.",speaker:"Kanhaiya",speakerUrl:"https://www.linkedin.com/in/kanhaiya-666/",speakerImage:"/team/kanhaiya.jpg",organizer:"Harsh Kanojia",organizerUrl:"https://www.linkedin.com/in/harsh-kanojia369/",organizerImage:"/team/harsh.jpg",eventPoster:"/vapt-poster.png",presentationLink:"https://canva.link/0xzoo0l2yi117s0",blogContent:`
+### Context
+We recently hosted an intensive hands-on workshop focused on real-world Web Application Penetration Testing (VAPT) using Burp Suite Professional. Led by Kanhaiya, an IT Security Analyst, the session provided attendees with practical workflows for identifying, exploiting, and reporting web vulnerabilities.
+
+### Workshop Objective
+The session aimed to elevate participants' scanning and manual testing capabilities:
+- Understand the Burp Suite Pro testing methodology
+- Perform advanced target mapping and active scanning
+- Master manual security testing workflows using Repeater and Intruder
+
+### Web Application Security Testing
+Kanhaiya walked through how to configure and optimize Burp Suite Pro for real-world engagements. We explored session handling rules, custom scan configurations, and target definitions to run efficient scans without disrupting services.
+
+### Manual & Automated Vulnerability Discovery
+We dived deep into manual testing techniques, including analyzing request-response flows, identifying logical vulnerabilities, and leveraging Burp extensions. Practical demonstrations covered SQL injection, Cross-Site Scripting (XSS), and Broken Access Control.
+
+### Key Takeaways
+- Automation speeds up scanning, but manual testing is crucial for finding complex logical flaws.
+- Properly configuring Burp Suite Pro scope and scan rules ensures accurate and efficient testing.
+- Hardening web applications requires a thorough understanding of common vulnerability patterns and remediation strategies.
+        `},{id:107,title:"AI Security: Threats, Risks & Defense",date:"May 16, 2026",type:"Workshop",description:"Insightful workshop exploring the AI threat landscape, focusing on AI security risks, defense mechanisms, Secure ADF pipelines, Key Vault, and RBAC strategies.",speaker:"Gauthaman Sakthivel",speakerUrl:"https://www.linkedin.com/in/gauthamansakthivel/",speakerImage:"/team/gauthaman.jpg",organizer:"Harsh Kanojia",organizerUrl:"https://www.linkedin.com/in/harsh-kanojia369/",organizerImage:"/team/harsh.jpg",eventPoster:"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000",presentationLink:"https://docs.google.com/presentation/d/1R8Fz_CeKMWf_t4G0ROQG7JQHuAzgJQJf/edit?usp=sharing&ouid=113587794034483694144&rtpof=true&sd=true",blogContent:`
 ### Context
 We recently hosted an insightful AI Security workshop within the Cyber Sphere Community, focusing on the intersection of Artificial Intelligence and modern cybersecurity. Led by Gauthaman Sakthivel, a Secure Azure Data Engineer, the session provided a deep dive into the emerging threats targeting AI models, associated risks in enterprise environments, and robust defense mechanisms.
 
