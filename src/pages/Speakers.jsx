@@ -53,6 +53,13 @@ const speakers = [
         image: "/team/kanhaiya.jpg",
         description: "Specializing in Web and Mobile (Android) Application Security testing, network security, and secure configuration reviews. Focused on hardening enterprise security postures.",
         linkedin: "https://www.linkedin.com/in/kanhaiya-666/"
+    },
+    {
+        name: "Lavanya Goyal",
+        role: "Associate Security Engineer",
+        image: "/team/lavanya.png",
+        description: "Associate Security Engineer, Google Women Techmaker, and Co-Founder of IcyGirl.CreamyBoy. Self-motivated, result-focused, and passionate about cybersecurity and entrepreneurship.",
+        linkedin: "https://www.linkedin.com/in/lavanya-goyal/"
     }
 ];
 
