@@ -2,6 +2,43 @@ export const upcomingEvents = [];
 
 export const pastEvents = [
     {
+        id: 109,
+        title: "Defensive Cybersecurity: Detect, Analyze, & Respond",
+        date: "Jun 06, 2026",
+        type: "Workshop",
+        description: "Step into the world of Defensive Cybersecurity and discover how modern Blue Teams protect organizations from cyber threats. Learn threat detection, social engineering, incident response, and watch a live malware analysis demo.",
+        speaker: "Lavanya Goyal",
+        speakerUrl: "https://www.linkedin.com/in/lavanya-goyal/",
+        speakerImage: "/team/lavanya.png",
+        organizer: "Harsh Kanojia",
+        organizerUrl: "https://www.linkedin.com/in/harsh-kanojia369/",
+        organizerImage: "/team/harsh.jpg",
+        eventPoster: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1000",
+        presentationLink: "https://www.canva.com/design/DAHLYl4vvP8/ODz_oPJMbWcMN1mliLWdTg/view?utlId=hce00a6acc3#2",
+        blogContent: `
+### Context
+We recently hosted an engaging workshop on Defensive Cybersecurity, focusing on the essential techniques, tools, and methodologies that modern Blue Teams use to protect organizations. Led by Lavanya Goyal, an Associate Security Engineer, the session provided attendees with a practical understanding of threat detection, defensive operations, and incident response.
+
+### Workshop Objective
+The session was structured to bridge the gap between theoretical defense and real-world security operations:
+- Understand the role and responsibilities of the modern Blue Team
+- Identify common social engineering and phishing attack vectors
+- Learn incident response workflows and threat detection strategies
+- Master the fundamentals of malware analysis and suspicious file investigation
+
+### Threat Detection & Incident Response
+Lavanya walked through the lifecycle of threat detection and incident response, illustrating how defenders monitor networks, analyze logs, and respond to alerts to neutralize threats before they cause damage.
+
+### Live Malware Analysis Demonstration
+A major highlight of the workshop was a live malware analysis demonstration. Lavanya demonstrated how security professionals dissect suspicious files, perform static and dynamic analysis, and extract threat intelligence in a secure sandbox environment.
+
+### Key Takeaways
+- Effective defense requires a deep understanding of attacker tactics, techniques, and procedures (TTPs).
+- Blue teaming is a highly structured process combining continuous monitoring, analysis, and rapid response.
+- Analyzing malware helps defenders write better detection signatures and harden network defenses.
+        `
+    },
+    {
         id: 108,
         title: "REAL-WORLD VAPT using BURP SUITE PRO",
         date: "May 23, 2026",
