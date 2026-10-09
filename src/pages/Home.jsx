@@ -33,20 +33,37 @@ const Home = () => {
                         
                         {/* Left Content - Precise Typography & CTAs */}
                         <ScrollReveal className="text-left space-y-6" yOffset={25}>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 border border-green-200 bg-green-50/50">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
-                                </span>
-                                <span className="font-mono-tech text-green-700 text-[10px] font-bold tracking-wider uppercase">
-                                    Community Active
-                                </span>
+                            <div className="flex flex-wrap items-center gap-2.5">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 border border-green-200 bg-green-50/50">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+                                    </span>
+                                    <span className="font-mono-tech text-green-700 text-[10px] font-bold tracking-wider uppercase">
+                                        Community Active
+                                    </span>
+                                </div>
+                                <a
+                                    href="https://secmentor.in"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-mono-tech tracking-wider text-slate-700 bg-white hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 border border-slate-200 shadow-sm transition-all"
+                                >
+                                    <span>POWERED BY</span>
+                                    <span className="font-bold text-blue-600">SECMENTOR</span>
+                                    <span className="text-blue-600 text-[10px] font-bold">↗</span>
+                                </a>
                             </div>
 
-                            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold font-orbitron tracking-tight leading-none flex flex-col items-start w-full text-slate-900">
-                                <span className="text-red-600 select-none">CYBER</span>
-                                <span className="text-slate-900 select-none">SPHERE</span>
-                            </h1>
+                            <div className="space-y-1">
+                                <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold font-orbitron tracking-tight leading-none flex flex-col items-start w-full text-slate-900">
+                                    <span className="text-red-600 select-none">CYBER</span>
+                                    <span className="text-slate-900 select-none">SPHERE</span>
+                                </h1>
+                                <p className="font-mono-tech text-[10px] sm:text-xs font-bold text-slate-500 tracking-[0.2em] uppercase pt-1">
+                                    POWERED BY <span className="text-blue-600 font-bold">SECMENTOR</span>
+                                </p>
+                            </div>
                             
                             <p className="text-xs sm:text-sm text-slate-500 font-sans font-bold tracking-[0.2em] uppercase border-b border-slate-100 pb-4 max-w-sm">
                                 Security Starts With Us

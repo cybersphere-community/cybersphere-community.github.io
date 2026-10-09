@@ -55,7 +55,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Radar scanning sweeps - precise technical lines */
+/* Radar scanning sweeps - SecMentor Electric Blue */
 .loader-circle {
   position: absolute;
   top: -10px;
@@ -64,12 +64,13 @@
   bottom: -10px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid rgba(220, 38, 38, 0.2);
-  border-top-color: #dc2626;
-  border-right-color: #16a34a;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-top-color: #2563eb;
+  border-right-color: #0066ff;
   will-change: transform;
   animation: loader-combined 3s linear infinite;
   z-index: 0;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.25);
 }
 
 /* Additional static radar rings for schematic effect */

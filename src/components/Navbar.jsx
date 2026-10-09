@@ -33,9 +33,14 @@ const Navbar = () => {
                     <div className="flex items-center">
                         <Link to="/" className="flex items-center gap-3 group">
                             <img src="/terminal-logo.png.png" alt="Cyber Sphere Logo" className="w-8 h-8 object-cover border border-slate-900 transition-transform group-hover:scale-105" />
-                            <span className="font-orbitron text-sm tracking-[0.1em] uppercase font-bold text-slate-900">
-                                <span className="text-red-600">CYBER</span> SPHERE
-                            </span>
+                            <div className="flex flex-col">
+                                <span className="font-orbitron text-xs sm:text-sm tracking-[0.1em] uppercase font-bold text-slate-900 leading-tight">
+                                    <span className="text-red-600">CYBER</span> SPHERE
+                                </span>
+                                <span className="font-mono-tech text-[8px] sm:text-[9px] text-slate-400 tracking-wider">
+                                    POWERED BY <span className="text-blue-600 font-bold group-hover:text-blue-700 transition-colors">SECMENTOR</span>
+                                </span>
+                            </div>
                         </Link>
                     </div>
 
