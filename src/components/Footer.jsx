@@ -8,11 +8,21 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-slate-200 pb-12">
                     {/* Brand column */}
                     <div>
-                        <div className="flex items-center gap-3 mb-4">
+                        <div className="flex items-center gap-3 mb-3">
                             <img src="/terminal-logo.png.png" alt="Cyber Sphere Logo" className="w-6 h-6 object-cover border border-slate-900" />
-                            <span className="font-bold text-slate-900 tracking-wider font-orbitron text-sm">
-                                <span className="text-red-600">CYBER</span> SPHERE
-                            </span>
+                            <div className="flex flex-col">
+                                <span className="font-bold text-slate-900 tracking-wider font-orbitron text-sm leading-tight">
+                                    <span className="text-red-600">CYBER</span> SPHERE
+                                </span>
+                                <a
+                                    href="https://secmentor.in"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-mono-tech text-[10px] text-slate-500 hover:text-blue-600 tracking-wider transition-colors inline-flex items-center gap-1"
+                                >
+                                    Powered by <span className="font-bold text-blue-600 underline underline-offset-2">SecMentor</span> ↗
+                                </a>
+                            </div>
                         </div>
                         <p className="text-slate-500 leading-relaxed max-w-sm">
                             Empowering the next generation of security researchers through hands-on education, collaborative CTFs, and open community sharing.
@@ -79,7 +89,7 @@ const Footer = () => {
 
                     {/* Copyright statement */}
                     <p className="text-[10px] text-slate-400 text-center sm:text-right font-mono-tech">
-                        &copy; {new Date().getFullYear()} CYBER SPHERE. OPEN SOURCE UNDER MIT.
+                        &copy; {new Date().getFullYear()} CYBER SPHERE &bull; POWERED BY <a href="https://secmentor.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline underline-offset-2 font-bold">SECMENTOR</a>
                     </p>
                 </div>
             </div>

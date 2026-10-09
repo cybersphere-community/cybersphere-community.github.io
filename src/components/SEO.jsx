@@ -9,13 +9,14 @@ const SEO = ({ title, description, canonical, keywords, image }) => {
     const organizationSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Cyber Sphere Community",
+        "name": "Cyber Sphere Community - Powered by SecMentor",
         "url": siteUrl,
         "logo": `${siteUrl}/terminal-logo.png.png`,
-        "description": "An open collective for ethical hackers and security researchers.",
+        "description": "An open collective for ethical hackers and security researchers, powered by SecMentor.",
         "sameAs": [
             "https://www.linkedin.com/company/cyber-sphere-369/?viewAsMember=true",
-            "https://github.com/cybersphere-community"
+            "https://github.com/cybersphere-community",
+            "https://secmentor.in"
         ],
         "contactPoint": {
             "@type": "ContactPoint",
@@ -28,9 +29,9 @@ const SEO = ({ title, description, canonical, keywords, image }) => {
     const websiteSchema = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Cyber Sphere Community",
+        "name": "Cyber Sphere Community - Powered by SecMentor",
         "url": siteUrl,
-        "description": "Leading cybersecurity community for ethical hackers, researchers, and security enthusiasts",
+        "description": "Leading cybersecurity community for ethical hackers, researchers, and security enthusiasts, powered by SecMentor",
         "potentialAction": {
             "@type": "SearchAction",
             "target": {
@@ -43,15 +44,15 @@ const SEO = ({ title, description, canonical, keywords, image }) => {
 
     return (
         <Helmet>
-            <title>{title ? `${title} | Cyber Sphere Community` : 'Cyber Sphere Community'}</title>
-            <meta name="description" content={description || "Join Cyber Sphere, the leading open community for ethical hackers, security researchers, and cyber professionals. access workshops, articles, and events."} />
-            <meta name="keywords" content={keywords || "cybersecurity, hacking, pentesting, ethical hacker, cyber sphere, infosec, bug bounty, cloud security, network defense, workshops"} />
+            <title>{title ? `${title} | Cyber Sphere (Powered by SecMentor)` : 'Cyber Sphere | Powered by SecMentor'}</title>
+            <meta name="description" content={description || "Join Cyber Sphere, powered by SecMentor, the leading open community for ethical hackers, security researchers, and cyber professionals. access workshops, articles, and events."} />
+            <meta name="keywords" content={keywords || "cybersecurity, hacking, pentesting, ethical hacker, cyber sphere, secmentor, infosec, bug bounty, cloud security, network defense, workshops"} />
             {canonical && <link rel="canonical" href={canonical} />}
 
             {/* Open Graph / Facebook */}
             <meta property="og:type" content="website" />
-            <meta property="og:title" content={title || "Cyber Sphere Community"} />
-            <meta property="og:description" content={description || "Join the Cyber Sphere Community - A hub for cybersecurity enthusiasts, students, and professionals."} />
+            <meta property="og:title" content={title || "Cyber Sphere | Powered by SecMentor"} />
+            <meta property="og:description" content={description || "Join the Cyber Sphere Community, powered by SecMentor - A hub for cybersecurity enthusiasts, students, and professionals."} />
             <meta property="og:image" content={metaImage} />
 
             {/* Twitter */}
